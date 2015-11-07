@@ -1,0 +1,44 @@
+Dec 27 2013 2:56 -- Keys for submission: Array
+(
+    [charset] => utf-8
+    [lc] => US
+    [page_style] => Primary
+    [custom] => zenid=fd364e129d4f18674863e32dd8fe862f
+    [business] => dinos_hall@163.com
+    [return] => http://www.daddy-store.com/index.php?main_page=checkout_process&amp;referer=paypal
+    [cancel_return] => http://www.daddy-store.com/index.php?main_page=checkout_payment
+    [shopping_url] => http://www.daddy-store.com/index.php?main_page=shopping_cart
+    [notify_url] => http://www.daddy-store.com/ipn_main_handler.php
+    [redirect_cmd] => _xclick
+    [rm] => 2
+    [bn] => Zhongtuo_Cart_EC_C2
+    [mrb] => R-4DM17246PS436904F
+    [pal] => GR5QUVVL9AFGN
+    [first_name] => cah
+    [last_name] => chang
+    [address1] => shenzhen
+    [city] => 25545
+    [state] => 0
+    [zip] => 518000
+    [country] => US
+    [email] => cah515@163.com
+    [H_PhoneNumber] => 0044512800
+    [night_phone_a] => 004
+    [night_phone_b] => 451
+    [night_phone_c] => 2800
+    [day_phone_a] => 004
+    [day_phone_b] => 451
+    [day_phone_c] => 2800
+    [no_shipping] => 1
+    [upload] => 1
+    [currency_code] => USD
+    [cmd] => _ext-enter
+    [item_name] => GL-BigStore Purchase
+    [item_number] => Store Receipt
+    [amount] => 143.39
+    [shipping] => 0.00
+    [tax] => 0.00
+    [tax_cart] => 0.00
+)
+
+

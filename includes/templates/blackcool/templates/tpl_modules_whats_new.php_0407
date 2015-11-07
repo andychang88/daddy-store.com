@@ -1,0 +1,104 @@
+<?php
+/**
+ * Module Template
+ *
+ * @package templateSystem
+ * @copyright Copyright 2003-2005 Zen Cart Development Team
+ * @copyright Portions Copyright 2003 osCommerce
+ * @license http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
+ * @version $Id: tpl_modules_whats_new.php 2935 2006-02-01 11:12:40Z birdbrain $
+ */
+ 
+ 
+ 
+ 
+  $zc_show_new_products = false;
+  include(DIR_WS_MODULES . zen_get_module_directory(FILENAME_NEW_PRODUCTS));
+?>
+<!-- bof: whats_new --><!-- bof: whats_new --><!-- bof: whats_new -->
+<?php if ($zc_show_new_products == true && sizeof($new_products)>0 ) { ?> 
+       <div class="<?php echo ($this_is_home_page)?'neue':'neue2';?>"> 
+         <h6><?php echo BOX_HEADING_NEW_PRODUCTS;?></h6>
+		 <ul>     
+         <!------------------------------------------------------------------------------------------------>    
+         <?php 
+		 $new_products=array();
+		 $fangan=2;
+		 
+		 if($fangan==1)
+		 {
+		 $result2=mysql_query("select * from `products_recommend` where 1 order by id desc limit 0,24");
+		 while($row2=mysql_fetch_array($result2))
+		 {
+			$cc=$cc." $row2[products_id]";
+			 }
+		 $cc=str_replace(' ',',',trim($cc));
+	
+	$result_d=mysql_query("select * from `products_recommend` where products_id in($cc) order by rand() limit 0,12");
+	
+		 }
+		 if($fangan==2)
+		 {
+			 $result_d=mysql_query("select * from `products_recommend` order by id desc limit 0,12");
+		}
+		 
+		 
+		 
+	while($row_d=mysql_fetch_array($result_d))
+	{	
+		//print_r($row_d);
+	
+		
+		$pro_d=mysql_fetch_array(mysql_query("select * from products_description where products_id='$row_d[products_id]' and language_id=3"));
+		
+		$pro_p=mysql_fetch_array(mysql_query("select * from products where products_id='$row_d[products_id]'"));
+	
+		$pro[products_name]=$pro_d[products_name];
+		$pro[products_image]=$pro_p[products_image];
+		$pro[products_price]="Preis:$".sprintf("%01.2f",$pro_p[products_price]);
+		$pro[buy_link]=zen_href_link(FILENAME_PRODUCT_INFO,'products_id='.$row_d[products_id]);
+		$pro[products_url_link]=zen_href_link(FILENAME_PRODUCT_INFO,'products_id='.$row_d[products_id]);
+	//	print_r($row_d);
+		
+		array_push($new_products,$pro);
+		}
+	
+		 ?>
+         <!------------------------------------------------------------------------------------------------>  
+			<?php foreach($new_products as $product){?>            
+                <li> 
+				   <?php if(defined('CHRISTMAS_50PERCENT_DISCOUNT_ENABLE') && CHRISTMAS_50PERCENT_DISCOUNT_ENABLE){?>
+				  	<div>
+					  <div class="discount_50">
+					  	<?php //echo zen_image(DIR_WS_TEMPLATE_IMAGES.'50percent80.gif');?>
+					  </div>
+					  <div>
+				  <?php }?>                 
+				   <a href="<?php echo $product['products_url_link'];?>" title="<?php echo $product['products_name'];?>">
+						    <?php echo zen_image(DIR_WS_IMAGES.$product['products_image'],
+												addslashes($product['products_name']),
+												80,
+												80,' class="float_left"');
+							 ?>                   
+				   </a>
+				   <p>
+                       <a href="<?php echo $product['products_url_link'];?>" title="<?php echo $product['products_name'];?>">
+                          <?php echo zen_trunc_string($product['products_name'],100,true);?>
+                       </a>
+                       <br />			   
+                       <span><?php //begin weixuefeng 修正货币类型显示 20110613
+							 $products_price_arr=explode('Preis:$',$product['products_price']);
+							echo $products_price='Preis:'.$currencies->format($products_price_arr[1]);
+							//end weixuefeng
+							 ?></span>
+                   </p> 
+				   <?php if(defined('CHRISTMAS_50PERCENT_DISCOUNT_ENABLE') && CHRISTMAS_50PERCENT_DISCOUNT_ENABLE){?>
+					  </div>
+					</div>
+				    <?php }?>                                 
+                </li>            
+			<?php }?>
+	    </ul>
+       </div>
+<?php } ?>
+<!-- eof: whats_new -->

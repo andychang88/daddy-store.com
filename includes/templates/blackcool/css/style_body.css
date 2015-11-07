@@ -1,0 +1,50 @@
+.clear {clear: both; display:block;}
+#head_right{float:right; margin:5px 0px 0px 0px; display:inline; width:700px;}
+* html #head_right{margin:3px 0px 0px 0px;}
+
+#head_right_top{height:20px; float:right; width:560px;}
+* html #head_right_top{height:0px;}
+#head_right_top a{margin:0px 10px 0px 10px; font-size:12px;}
+
+.cart_s{font-size:12px; font-weight:bold;}
+.cart_s img{margin-left:5px;}
+
+#head_right_middle{float:right; margin:5px 0px 0px 0px; padding:0px; height:48px; width:690px;}
+* html #head_right_middle{margin:0px;}
+
+/*  ˵   CSS  */
+
+#tabs_top ul li div {padding:10px 5px 10px 0px; font-weight:normal;}
+#tabs_top ul li div a{margin:0px!important;}
+
+#tabs_top {right:0px; text-align: left; position:relative; margin:-3px 0 0; float:left;}
+#tabs_top img{border:0;}
+#tabs_top a{color:#333; text-decoration:none; margin:0px!important;}
+#tabs_top a:hover{color:#000000; text-decoration:underline;}
+#tabs_top ul {	padding:0px; margin: 0px;}
+#tabs_top ul li {display: inline;/* float: left; */padding:0px;}
+
+#tabs_top ul li a.outer {display: block; font-size: 12px; text-indent: 1em; line-height:14px;/* height: 26px;*/ text-decoration: none}
+#tabs_top ul li strong.outer{ display: block; font-size: 12px; text-indent: 1em; line-height:14px;/* height: 26px; */text-decoration: none}
+
+#tabs_top ul li a.three {background: url(tabs_3_.gif) no-repeat; width: 140px}
+
+#tabs_top ul li div {	position: absolute; top: -2400px}
+
+
+#tabs_top ul li a div.tab_right {	background: url(tab_right.gif) bottom no-repeat; left:-140px; width: 135px; text-indent: 1em; padding-bottom:10px; font-size:11px!important;}
+#tabs_top ul li div.tab_right {	background: url(tab_right.gif) bottom no-repeat;/* left: 249px; */width: 135px; text-indent: 1em; position:absolute; padding-bottom:10px;}
+
+
+#tabs_top ul li:hover > a.three {	background: url(tabs_3_.gif) no-repeat 0px -28px; cursor: default; color: #000; /* height: 26px*/}
+#tabs_top ul li a.three:hover {	background: url(tabs_3_.gif) no-repeat 0px -28px; cursor: default; color: #000;/* height: 26px*/}
+* html #tabs_top ul li a.three:hover {	background: url(tabs_3_.gif) no-repeat 0px -28px; cursor: default; color: #000;/* height: 26px*/}
+
+#tabs_top ul li:hover div {	top:20px}
+#tabs_top ul li a:hover div {top:20px}
+#tabs_top p {padding:0px; margin:0px;}
+#tabs_top em {	font-weight: normal; margin-left:0px; font-style: normal; text-decoration: underline}
+.tab_right p {	height: 18px}
+.tab_right p a{font-size:11px!important;}
+.tab_right img {	margin-right: 0.5em}
+/*  end  */

@@ -1,0 +1,34 @@
+<?php
+/**
+ * Page Template
+ *
+ * @package templateSystem
+ * @copyright Copyright 2003-2007 Zen Cart Development Team
+ * @copyright Portions Copyright 2003 osCommerce
+ * @license http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
+ * @version $Id: tpl_time_out_default.php 6620 2007-07-17 05:52:19Z drbyte $
+ */
+?>
+
+<div class="successful">
+<?php
+    if ($_SESSION['customer_id']) {
+?>
+    <h1 id="timeoutDefaultHeading"><?php echo HEADING_TITLE_LOGGED_IN; ?></h1>
+    <div id="timeoutDefaultContent" class="content"><?php echo TEXT_INFORMATION_LOGGED_IN; ?></div>
+<?php
+  } else {
+?>
+<div class="right_big_con margin_t allborder">
+	<h2 class="line_30px pad_l_28px margin_t"><span class="red"><?php echo HEADING_TITLE; ?></span></h2>	
+	<div class="pad_50px pad_l_28px margin_t"><?php echo TEXT_INFORMATION; ?></div>
+	<div class="pad_10px g_t_c">
+	  <a href="<?php echo zen_href_link(FILENAME_DEFAULT);?>">
+	     <?php echo zen_image(DIR_WS_TEMPLATE_BUTTON.'button_continue.gif');?> 
+	  </a>
+	</div>
+</div>
+<?php
+ }
+ ?>
+ </div>

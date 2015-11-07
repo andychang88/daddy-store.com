@@ -1,0 +1,59 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=$CHARSET" /> 
+<base href="$BASE_HREF" />
+
+<style type="text/css">
+.body {background-color:#ffffff; color:#000000; font-family:Verdana, Arial, Helvetica, sans-serif; text-align:center;}
+a:link {color:#900;}
+a:hover {color:#900;}
+a:visited {color:#0066cc;}
+.holder { background-color: #f9f9f9; border: 1px #9a9a9a solid; font-size: 9px; text-align: left; width:600px; margin:0 auto; padding:0;}
+.header {font-size:10px; padding:0px;width:600px; height:66px;}
+.content {font-size:10px; padding:5px; width:600px; margin:0 auto; padding:0; }
+.content-line {padding:5px;}
+.coupon-block { padding: 5px; border: 1px #cccccc solid; background-color: #FFFF99; }
+.coupon-code {font-weight:bold;}
+.gv-block { padding: 5px; border: 1px #cccccc solid; background-color: #99FF99; }
+.gv-code {font-weight:bold;}
+.footer {border-top:1px solid #9a9a9a; font-size:9px; text-align:center; width:600px; margin:0 auto; padding:0; }
+.disclaimer {background-color:#333; font-size:10px; margin-top:10px; padding:5px 0; width:602px; margin:0 auto; }
+.disclaimer1 {color:#fff; padding:5px;}
+.disclaimer1 a:link {color:#fff;}
+.disclaimer1 a:visited {color:#fff;}
+.disclaimer2 {color:#fff; padding:5px;}
+.unsubscribe {border-bottom:1px solid #9a9a9a; padding:5px;}
+.copyright {border-bottom:0px solid #9a9a9a; padding:5px;}
+</style>
+
+</head>
+
+<body class="body">
+<div class="holder">
+
+  <!-- Header Section -->
+  <table width="100%" height="49" cellspacing="0" cellpadding="0" border="0" align="center" style="border-bottom: 2px solid rgb(251, 130, 0);" widtd="100%">  <tbody><tr bgcolor="#f8f8f8">    <td width="27%" height="47" scope="col"><div align="center"><img width="150" height="40" src="email/email_logo.png"></div></td>    <td width="73%" align="left" scope="col"><div align="right"><font face="Arial, Helvetica, sans-serif" size="5"><strong><font color="#ff9900">FREE SHIPPING</font></strong> <font color="#333333" size="4">for all orders under 2Kg&nbsp;&nbsp;</font></font></div></td>  </tr></tbody></table>
+
+
+  <!-- Content Section -->
+  <div class="content">
+    <div class="content-line">$EMAIL_WELCOME</div>
+    <div class="content-line">$EMAIL_MESSAGE_HTML</div>
+    <div class="content-line">$EMAIL_CONFIRMATION_LINK</div>
+    <div class="content-line">$EMAIL_CONTACT_OWNER<br />$EMAIL_CLOSURE</div>
+  </div> 
+</div>
+ 
+  <!-- Footer Section -->
+
+<div class="disclaimer">
+  <div class="disclaimer1">$EMAIL_DISCLAIMER</div>
+  <div class="disclaimer2">$EMAIL_SPAM_DISCLAIMER</div>
+</div>
+
+<div class="footer">
+    <div class="copyright">$EMAIL_FOOTER_COPYRIGHT</div>
+  </div>
+$EXTRA_INFO
+</body>
+</html>

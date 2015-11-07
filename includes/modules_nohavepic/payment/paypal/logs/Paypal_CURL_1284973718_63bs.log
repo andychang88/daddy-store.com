@@ -1,0 +1,49 @@
+2010-09-20 11:08:38
+-------------------
+(live transaction) --> https://api-3t.paypal.com/nvp
+Request Headers: 
+Array
+(
+    [0] => Content-Type: text/namevalue
+    [1] => X-VPS-Timeout: 45
+    [2] => X-VPS-VIT-Client-Type: PHP/cURL
+    [3] => X-VPS-VIT-Integration-Product: PHP::Zen Cart - WPP-NVP
+    [4] => X-VPS-VIT-Integration-Version: 1.3.8a
+)
+
+
+Request Parameters: {SetExpressCheckout} 
+Array
+(
+    [LOCALECODE] => DE
+    [PAYMENTACTION] => Sale
+    [EMAIL] => rs@relay.de
+    [AMT] => 87.00
+    [RETURNURL] => http://www.efox-shop.com/ipn_main_handler.php?type=ec
+    [CANCELURL] => http://www.efox-shop.com/index.php?main_page=checkout_shipping&amp;ec_cancel=1
+    [PAGESTYLE] => Primary
+    [METHOD] => SetExpressCheckout
+    [CURRENCYCODE] => EUR
+    [USER] => goglobalonline_api1.gmail.com
+    [PWD] => ****************
+    [VERSION] => 3.2
+    [SIGNATURE] => ****************************************************8K2z
+)
+
+
+Response: 
+Array
+(
+    [TIMESTAMP] => 2010-09-20T09:08:38Z
+    [CORRELATIONID] => 6155ce0d962a1
+    [ACK] => Failure
+    [VERSION] => 3.2
+    [BUILD] => 1516242
+    [L_ERRORCODE0] => 10002
+    [L_SHORTMESSAGE0] => Restricted account
+    [L_LONGMESSAGE0] => Account is restricted
+    [L_SEVERITYCODE0] => Error
+    [CURL_ERRORS] => 
+)
+
+

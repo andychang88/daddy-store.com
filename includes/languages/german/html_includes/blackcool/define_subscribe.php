@@ -1,0 +1,2 @@
+<h1>Newsletter-Anmeldung</h1>
+<p>Vielen Dank für einen Moment, um unseren Newsletter zu abonnieren. Mit dem Sie Hinweise bietet der neu verfügbaren Produkte, Sonderangebote und News des bevorstehenden Aufführungen erhalten.</p>

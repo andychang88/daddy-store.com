@@ -1,0 +1,20 @@
+##### NOTE: Replace /shop/ with the relative web path of your catalog in the "Rewrite Base" line below:
+
+Options   -Indexes
+RewriteEngine On
+RewriteBase /
+
+order allow,deny
+allow from all
+
+DirectoryIndex index.php
+ErrorDocument   404   /404.php
+
+
+# All other pages
+# Don\'t rewrite real files or directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*) index.php?/$1 [E=VAR1:$1,QSA,L]
+RewriteRule ^index\.html$ -  [L]
+#RewriteRule ^(.*).html$ index\.php?main_page=$1&%{QUERY_STRING} [L]

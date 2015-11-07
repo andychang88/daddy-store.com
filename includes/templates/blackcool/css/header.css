@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    min-width: 1004px;
+    position: relative;
+    z-index: 10;
+	width:100%;
+}
+.wauto {
+    min-width:1004px;
+}
+
+.header .logo {
+    margin: 15px 10px 5px;
+}
+.fl {
+    display: inline;
+    float: left;
+}
+
+/*顶部菜单*/
+.nav_links {
+	list-style:none;
+	font-size:12px;
+	position:absolute;
+	top:75px;	
+	left:240px;
+}
+.nav_links li{
+ float:left;
+ margin-left:8px;
+ padding-right:8px;
+ border-right:1px solid #ccc;
+ height:23px;
+ line-height:23px;
+}
+.nav_links li a{
+color:#333333;
+text-decoration:none;
+}
+
+/**清除塌陷**/
+.clear {
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+}
+.clear {
+    clear: both;
+}
+
+/**************虚线************/
+.nav_line{
+background:url(includes/templates/blackcool/common/img/extag_repeat.png); 
+background-repeat:repeat-x; 
+background-position:0px -58px;
+position:absolute; 
+height:1px; 
+width:240px; 
+top:111px;
+z-index:99;
+}
+/************头部灰色背景*********************/
+.nav_headbg{
+background-image:url(includes/templates/blackcool/common/img/extag_repeat.png);
+background-repeat:repeat-x; 
+background-position:0px -120px;
+height:49px; 
+width:100%;
+min-width:1004px;
+border-top:1px solid #E7E7E7;
+position:absolute;
+top:111px;
+z-index:-1;
+}
+#care_right{  /*右边的文本框之类*/
+border:1px solid green;
+height:100%;
+overflow:hidden;
+margin-left:230px;
+}
+.searchnote{
+border:1px solid green;
+margin-left:-60px;
+position: absolute;
+top:15px;
+z-index: 2;
+font-size:14px;
+}
+.btn_search {
+    background: url(includes/templates/blackcool/common/img/extag_repeat.png) no-repeat scroll right -342px rgba(0, 0, 0, 0);
+    border: medium none;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    padding:10px 5px;
+	margin-right:485px;
+	float:right;
+    z-index: 2;
+}
+input[type="file"], input[type="image"], input[type="submit"], input[type="reset"], input[type="button"], input[type="radio"], input[type="checkbox"] {
+    width: auto;
+}
+label, select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] {
+    cursor: pointer;
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    cursor: pointer;
+}
+.searchsum {    
+	background:url(includes/templates/blackcool/common/img/extag_repeat.png);
+	background-repeat:no-repeat;
+    background-position:-9px -9px;
+    border-radius: 6px 6px 6px 6px;
+    height: 35px;
+    margin:5px 0 0 0px;
+	border:1px solid #ccc;
+}
+
+.defaltB {
+
+    margin-right:485px;
+}
+.search_gavy{
+    background:url(includes/templates/blackcool/common/img/extag_repeat.png);
+	background-repeat:repeat-x;
+    background-position:0px -195px;
+	height:35px;
+	margin-left:7px;
+}
+.search{
+overflow:hidden;
+}
+.search_input{
+overflow:hidden;
+}
+
+.search_input input[type="text"] {
+    border: medium none;
+    box-shadow: none;
+    height: 32px;
+    line-height: 32px;
+    margin: 2px 0 0;
+    padding: 0;
+    width: 100%;
+	color:#ccc;
+	font-weight:normal;
+}
+.head_left{
+background-image:url(includes/templates/blackcool/common/img/extag_repeat.png);
+background-repeat:no-repeat;
+background-position:0px -290px;
+width:120px;
+height:40px;
+float:left;
+margin-left:15px;
+}
+.head_left span{
+ width:90px;
+ height:38px;
+ color:white;
+ margin-left:15px;
+ margin-top:2px;
+ display:block;
+ float:left;
+ font-size:12px;
+
+}
+.head_left span p{
+width:10px;
+height:40px;
+}
+.head_left2{
+background-image:url(includes/templates/blackcool/common/img/extag_repeat.png);
+background-repeat:no-repeat;
+background-position:-230px -290px;
+width:10px;
+height:40px;
+
+float:right;
+}
+
+
+/********************右侧的*************************/
+.head_right2{
+height:49px; 
+float:right;
+width:330px;
+}
+/************************注册******************************/
+.zhuce{
+border-right:1px solid #ccc;
+position:absolute;
+top:5px;
+right:200px;
+height:40px;
+width:130px;
+display:block;
+
+}
+.fast_box{               
+color:block;
+font-size:12px; 
+text-align:center;
+
+}
+.subnav_div{
+border:1px solid red;
+height:120px;
+width:228px;
+margin-left:-100px;
+margin-top:40px;
+}
+.fast_left{
+width:120px;
+height:40px;
+float:left;
+}
+.font_span{
+ width:90px;
+ height:40px;
+ color:black;
+ margin-left:10px;
+ display:block;
+ float:left;
+ padding-top:2px;
+}
+.fast_left2{
+
+width:10px;
+height:40px;
+float:right;
+}
+
+/*点击之后*/
+.fast_left1{
+background-image:url(includes/templates/blackcool/common/img/extag_repeat.png);
+background-repeat:no-repeat;
+background-position:0px -290px;
+width:120px;
+height:40px;
+float:left;
+
+}
+.font_span1{
+ width:90px;
+ height:40px;
+ color:white;
+ margin-left:10px;
+ display:block;
+ float:left;
+  padding-top:2px;
+
+}
+.fast_left21{
+background-image:url(includes/templates/blackcool/common/img/extag_repeat.png);
+background-repeat:no-repeat;
+background-position:-230px -290px;
+width:10px;
+height:40px;
+float:right;
+}
+/***********购物车******************************************/
+.shop_car{
+
+ height:40px;
+ width:200px;
+ position:absolute;
+ top:5px;
+ right:5px;
+}
+.subnav_car{
+margin-top:40px;
+height:80px;
+width:220px;
+margin-left:-30px;
+border:1px solid red;
+}
+.car_left{
+width:180px;
+height:40px;
+float:left;
+margin-left:10px;
+
+}
+.car_span{
+ width:165px;
+ height:38px;
+ color:black;
+ margin-left:3px;
+ margin-top:2px;
+ display:block;
+ float:left;
+ font-size:12px;
+}
+.imgp{
+border:1px solid green;
+background-image:url(includes/templates/blackcool/common/img/extag_repeat.png);
+background-repeat:no-repeat;
+background-position:-75px -75px;
+width:40px;
+height:38px;
+}
+
+.imgp2{
+background-image:url(includes/templates/blackcool/common/img/extag_repeat.png);
+background-repeat:no-repeat;
+background-position:-130px 0px;
+width:40px;
+height:38px;
+}
+
+
+.imgp span{
+border:1px solid red;
+}
+.car_left2{
+width:10px;
+height:40px;
+float:right;
+}
+
+.car_left1{
+background-image:url(includes/templates/blackcool/common/img/extag_repeat.png);
+background-repeat:no-repeat;
+background-position:0px -290px;
+width:180px;
+height:40px;
+float:left;
+}
+.car_span1{
+ width:165px;
+ height:38px;
+ color:white;
+ margin-left:3px;
+ margin-top:2px;
+ display:block;
+ float:left;
+ font-size:12px;
+ border:1px solid green;
+}
+.car_left21{
+background-image:url(includes/templates/blackcool/common/img/extag_repeat.png);
+background-repeat:no-repeat;
+background-position:-230px -290px;
+width:10px;
+height:40px;
+float:right;
+}
+
+.rightbody{
+float:right;width: 300px;height:500px;
+}
+.centron{
+	overflow:hidden;
+}
+.centron .addmar{margin-left:215px;}

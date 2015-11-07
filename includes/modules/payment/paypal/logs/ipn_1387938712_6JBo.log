@@ -1,0 +1,32 @@
+Dec 25 2013 3:31 -- IPN INFO - POST VARS to be sent back for validation: 
+To: ssl://sandbox.paypal.com:443
+POST /cgi-bin/webscr HTTP/1.1
+Host: sandbox.paypal.com
+Content-type: application/x-www-form-urlencoded
+Content-length: 101
+Connection: close
+
+Array
+(
+    [cmd] => _notify-sync
+    [tx] => 1RW7055209174240M
+    [at] => Jy-qZ**********4yqka
+)
+
+
+Dec 25 2013 3:31 -- IPN INFO - Confirmation/Validation response 
+SUCCESS
+
+Dec 25 2013 3:31 -- IPN INFO :: Transaction email details.
+From IPN = dinos_hall@163.com | dinos_hall@163.com
+From CONFIG = dinos_hall@163.com
+
+Dec 25 2013 3:31 -- IPN INFO :: Currency/Amount Details: 
+PayPal email address = dinos_hall@163.com
+ | mc_currency = USD
+ | submitted_currency = USD
+ | order_currency = USD
+ | mc_gross = 10.77
+ | converted_amount = 10.77
+ | order_amount = 10.767322834646
+

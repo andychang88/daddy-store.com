@@ -1,0 +1,40 @@
+Dec 25 2013 3:31 -- PDT Returned Data Array
+(
+    [transaction_subject] => zenid=g74a9gkg11bf6q7e062g131nq0
+    [payment_date] => 18:31:43 Dec 24, 2013 PST
+    [txn_type] => web_accept
+    [last_name] => chang
+    [residence_country] => US
+    [item_name] => GL-BigStore Purchase
+    [payment_gross] => 10.77
+    [mc_currency] => USD
+    [business] => dinos_hall@163.com
+    [payment_type] => instant
+    [protection_eligibility] => Ineligible
+    [payer_status] => verified
+    [tax] => 0.00
+    [payer_email] => hhxdd521@163.com
+    [txn_id] => 1RW7055209174240M
+    [quantity] => 1
+    [receiver_email] => dinos_hall@163.com
+    [first_name] => andy
+    [payer_id] => QT5DNPZEQCHGE
+    [receiver_id] => EH6VH3E963W9J
+    [item_number] => Store Receipt
+    [payer_business_name] => andy chang's Test Store
+    [handling_amount] => 0.00
+    [payment_status] => Completed
+    [payment_fee] => 0.61
+    [mc_fee] => 0.61
+    [shipping] => 0.00
+    [mc_gross] => 10.77
+    [custom] => zenid=g74a9gkg11bf6q7e062g131nq0
+    [charset] => windows-1252
+)
+
+
+Dec 25 2013 3:32 -- PDT NOTICE :: Order added: 2396
+PayPal status: Completed  @ 18:31:43 Dec 24, 2013 PST
+ Trans ID:1RW7055209174240M
+ Amount: 10.77 USD
+

@@ -1,0 +1,44 @@
+Dec 25 2013 3:30 -- Keys for submission: Array
+(
+    [charset] => utf-8
+    [lc] => US
+    [page_style] => Primary
+    [custom] => zenid=g74a9gkg11bf6q7e062g131nq0
+    [business] => dinos_hall@163.com
+    [return] => http://www.glstore.com/index.php?main_page=checkout_process&amp;referer=paypal
+    [cancel_return] => http://www.glstore.com/index.php?main_page=checkout_payment
+    [shopping_url] => http://www.glstore.com/index.php?main_page=shopping_cart
+    [notify_url] => http://www.glstore.com/ipn_main_handler.php
+    [redirect_cmd] => _xclick
+    [rm] => 2
+    [bn] => Zhongtuo_Cart_EC_C2
+    [mrb] => R-4DM17246PS436904F
+    [pal] => GR5QUVVL9AFGN
+    [first_name] => name1
+    [last_name] => name2
+    [address1] => aaaaaa
+    [city] => aaaaaa
+    [state] => 0
+    [zip] => aaaaaa
+    [country] => US
+    [email] => 234830466@qq.com
+    [H_PhoneNumber] => 00441213123123
+    [night_phone_a] => 004
+    [night_phone_b] => 412
+    [night_phone_c] => 1312
+    [day_phone_a] => 004
+    [day_phone_b] => 412
+    [day_phone_c] => 1312
+    [no_shipping] => 1
+    [upload] => 1
+    [currency_code] => USD
+    [cmd] => _ext-enter
+    [item_name] => GL-BigStore Purchase
+    [item_number] => Store Receipt
+    [amount] => 10.77
+    [shipping] => 0.00
+    [tax] => 0.00
+    [tax_cart] => 0.00
+)
+
+

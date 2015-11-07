@@ -1,0 +1,53 @@
+2010-09-20 11:12:16
+-------------------
+(live transaction) --> https://api-3t.paypal.com/nvp
+Request Headers: 
+Array
+(
+    [0] => Content-Type: text/namevalue
+    [1] => X-VPS-Timeout: 45
+    [2] => X-VPS-VIT-Client-Type: PHP/cURL
+    [3] => X-VPS-VIT-Integration-Product: PHP::Zen Cart - WPP-NVP
+    [4] => X-VPS-VIT-Integration-Version: 1.3.8a
+)
+
+
+Request Parameters: {SetExpressCheckout} 
+Array
+(
+    [LOCALECODE] => DE
+    [PAYMENTACTION] => Sale
+    [EMAIL] => katja.baresel@freenet.de
+    [AMT] => 33.95
+    [RETURNURL] => http://www.efox-shop.com/ipn_main_handler.php?type=ec
+    [CANCELURL] => http://www.efox-shop.com/index.php?main_page=checkout_shipping&amp;ec_cancel=1
+    [PAGESTYLE] => Primary
+    [METHOD] => SetExpressCheckout
+    [CURRENCYCODE] => EUR
+    [USER] => goglobalonline_api1.gmail.com
+    [PWD] => ****************
+    [VERSION] => 3.2
+    [SIGNATURE] => ****************************************************8K2z
+)
+
+
+Response: 
+Array
+(
+    [TIMESTAMP] => 2010-09-20T09:12:15Z
+    [CORRELATIONID] => 71cb94f9c6f00
+    [ACK] => Failure
+    [VERSION] => 3.2
+    [BUILD] => 1516242
+    [L_ERRORCODE0] => 10002
+    [L_SHORTMESSAGE0] => Restricted account
+    [L_LONGMESSAGE0] => Account is restricted
+    [L_SEVERITYCODE0] => Error
+    [CURL_ERRORS] => 
+)
+
+
+SetExpressCheckout, Elapsed: 721ms -- Failure
+
+TIMESTAMP=2010%2d09%2d20T09%3a12%3a15Z&CORRELATIONID=71cb94f9c6f00&ACK=Failure&VERSION=3%2e2&BUILD=1516242&L_ERRORCODE0=10002&L_SHORTMESSAGE0=Restricted%20account&L_LONGMESSAGE0=Account%20is%20restricted&L_SEVERITYCODE0=Error&CURL_ERRORS=
+

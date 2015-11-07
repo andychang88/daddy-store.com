@@ -1,0 +1,992 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+/*************customed by john ************/
+
+#no_more_quantity{
+
+   display:none;
+
+   color:black;
+
+   font:bold;
+
+   height:22px;
+
+   border:#FF0000 1px  dashed;
+
+   text-align:center;
+
+   vertical-align:middle;
+
+   width:300px;
+
+   float:left;
+
+   margin:10px 0 5px 10px !important;
+
+   padding-top:5px!important;
+
+}
+
+#no_more_quantity a{
+
+   color:#009900;
+
+   font-style:italic;
+
+}
+
+#wholesale a{ 
+
+   color:#009900;
+
+   font-style:italic;
+
+}
+
+#price_calc_panel{
+
+   color:#fb8200;
+
+   font-size:16px;
+
+}
+
+.messageStackError{
+
+   border:1px dashed #ecfcb4;
+
+}
+
+.messageStackSuccess{
+
+   border:1px dashed #ecfcb4;
+
+   margin-top:10px;
+
+}
+
+/*.red2{
+
+  font-size:9px;
+
+}*/
+
+.newsletter_2 ul li p{line-height:1.5;}
+
+.rhf_left p{line-height:2.5;}
+
+.input_text_border{
+
+   border:1px #8fbc8f solid;
+
+}
+
+.focus_input_border{
+
+   border:1px #daa520 solid;
+
+}
+
+/****start:make from litb ****/
+
+.right_big_con{
+
+   float:right;
+
+   overflow:hidden;
+
+   width:1000px;
+
+}
+
+.margin_t{
+
+   margin-top:10px;
+
+   margin-left:5px;
+
+}
+
+.allborder{
+
+  border:1px solid #6CB500;
+
+}
+
+.line_30px{
+
+  line-height:30px;
+
+  font-size:16px;
+
+}
+
+.pad_l_28px{
+
+  padding-left:28px;
+
+}
+
+.pad_50px{
+
+  padding:20px;
+
+}
+
+.big{
+
+}
+
+a.big:link,a.big:visited {
+
+  font-size:15px;
+
+}
+
+.g_t_c{
+
+  text-align:center;
+
+  margin-bottom:20px;
+
+}
+
+/****end:make from litb***/
+
+
+
+/*****new product listing sort area ***/
+
+#sorter .span_l{
+
+  float:left!important;;
+
+  with:500px;
+
+  vertical-align:middle;
+
+  padding-top:3px; 
+
+}
+
+#sorter .span_r{
+
+  float:right!important;
+
+  width:300px;
+
+  vertical-align:middle;
+
+  margin-left:30px;
+
+}
+
+#newProductsDefault .grid ul li{
+
+  height:210px!important;
+
+}
+
+/*****shopping cart*****/
+
+#cart_things{width:100%;}
+
+#cart_things td{
+
+  text-align:center;
+
+  vertical-align:middle;
+
+}
+
+/*****product tag***/
+
+.productags_list span{
+
+   color:#009900;
+
+   font-size:25px;
+
+   font-style:italic;
+
+}
+
+.a_z_con{
+
+  text-align:center;
+
+}
+
+/*****product info*****/
+
+.info_p1{
+
+  padding-left:12px;
+
+}
+
+/*#div_review_btn{
+
+}*/
+
+#div_show_processing{
+
+  display:none;
+
+}
+
+/*****special page ****/
+
+.special_grid{border:1px solid #ecfcb4; border-bottom-width:2px; padding:5px; margin-left:5px;}
+
+.special_grid ul{ margin:0px 0px 10px 0px; padding:0px 0px 10px 0px; height:100%; overflow:hidden;}
+
+.special_grid ul li{border-bottom:1px solid #CCC; width:180px; 
+
+                    margin:0px 10px 20px 10px; 
+
+					float:left; 
+
+					display:inline; 
+
+					padding:0px 0px 10px 0px; 
+
+					height:240px;}
+
+.special_grid ul li h2{font-size:11px; margin:5px 0px 0px 0px; padding:0px; font-weight:normal;}
+
+.special_p_price{margin:10px 0px 5px 0px!important; font-size:14px; color:#E68A05; }
+
+/*****search_listing****/
+
+#search_listing .grid li{
+
+  height:250px!important;
+
+}
+
+/*****jquery valid****/
+
+input.error,textarea.error{
+
+	/*border:1px  #E68A05 solid;*/             /*ɫ*/
+
+	color:#E68A05!important;             /*ɫ*/
+
+   /*border:1px  #E54303 solid;
+
+   color:#E54303!important;           ٺɫ*/
+
+}
+
+
+
+.error{ 
+
+	color:#fb8200;                  
+
+	/*color:red;  */
+
+	line-height:100%; 
+
+}
+
+
+
+.h1_title{
+
+  font-size:11px;
+
+  display:inline;
+
+}
+
+/******checkout shipping address**/
+
+.weiter{
+
+   padding-left:200px;
+
+}
+
+.neue2 ul li{
+
+   height:110px!important;
+
+}
+
+.neue ul li{
+
+   height:90px!important;
+
+}
+
+/*****product review******/
+
+#reivew_error_tip{
+
+   width:420px;
+
+   text-align:left;
+
+   /*border:1px dashed #99FF00;*/
+
+   line-height:100%;
+
+   font-size:14px;
+
+   padding-top:10px;
+
+   font-weight:bold;
+
+   color:#99CC33;
+
+}
+
+/*****wholesale listing page ****/
+
+.wholesale_grid{border:1px solid #6CB500; border-bottom-width:2px; padding:5px; margin-left:5px; }
+
+.wholesale_grid ul{ margin:0px 0px 10px 0px; padding:0px 0px 10px 0px; height:100%; overflow:hidden;}
+
+.wholesale_grid ul li{border-bottom:1px solid #CCC; width:180px; 
+
+						margin:0px 10px 20px 10px; 
+
+						float:left; 
+
+						display:inline; 
+
+						padding:0px 0px 10px 0px; 
+
+						height:180px;}
+
+.wholesale_grid ul li h2{font-size:11px; margin:5px 0px 0px 0px; padding:0px; font-weight:normal;}
+
+.wholesale_p_price{margin:10px 0px 5px 0px!important; font-size:14px; color:#900; }
+
+/*****window shaking****/
+
+.copyright2{width:1004px; 
+
+            margin:13px auto 0px auto; 
+
+			text-align:center; 
+
+			padding:20px 0px 10px 0px;
+
+			color:#333; 
+
+			min-height:320px;
+
+			border-top:1px solid #6CB500;}
+
+.copyright2 p{margin:8px 0px;}
+
+.copyright2 ul{margin:10px auto; width:650px; height:100%; overflow:hidden;}
+
+.copyright2 li{float:left; display:inline; margin:0px 5px;}
+
+.suces a {
+
+  color:#92cf0a;
+
+  font-weight:bold;
+
+}
+
+.shipping_b{/*min-height:350px;*/}
+
+
+
+#accountHistoryDefaultHeading {
+
+	font-size:18px;
+
+	color:#92cf0a;
+
+}
+
+
+
+.coupon_input input{
+
+   border:1px solid #57A900;
+
+}
+
+.table_t{
+
+ width:99%;
+ border-left: 1px solid #F0F0F0;
+ border-top: 1px solid #F0F0F0;
+
+}
+
+/****new page next previouse****/
+
+div.scott {
+
+	MARGIN:10px 0 0 10px; PADDING: 3px; TEXT-ALIGN: center
+
+}
+
+div.scott2 {
+
+	MARGIN:0; PADDING:10px 0; TEXT-ALIGN: center; border:1px solid #ECFCB4; border-top:none;
+
+}
+
+div.scott A {
+
+	PADDING: 2px 5px;COLOR: #88af3f; MARGIN-RIGHT: 2px;BORDER: #ddd 1px solid; TEXT-DECORATION: none
+
+}
+
+div.scott A:hover {
+
+	COLOR: #fff; BORDER: #fdbf65 1px solid; BACKGROUND-COLOR: #fde0b6
+
+}
+
+div.scott span.current {
+
+	FONT-WEIGHT: bold; PADDING: 2px 5px;COLOR: #fff; MARGIN-RIGHT: 2px;BORDER:#74AD22 1px solid; BACKGROUND-COLOR: #85C907
+
+}
+
+div.scott span.disabled {
+
+	PADDING: 2px 5px;COLOR: #ccc; MARGIN-RIGHT: 2px;BORDER: #f3f3f3 1px solid
+
+}
+
+/****more style for review split page*****/
+
+div.scott2{
+
+  height:100%; 
+
+  overflow:hidden;
+
+}
+
+#pages_r{margin:0px 10px 0px 0px; float:right; display:inline; height:100%; overflow:hidden;}
+
+#pages_r ul{float:right; display:inline; /*margin:18px 0px;*/}
+
+#pages_r ul li{line-height:20px; padding:0px; margin:0px 3px; display:inline; border:1px solid #CCC;}
+
+.review_currpage{
+
+				background-color:#85C907;
+
+				border:1px solid #74AD22;
+
+				color:#FFFFFF!important;
+
+				font-weight:bold;
+
+				margin-right:2px;
+
+				padding:2px 5px;
+
+}
+
+.page_hover{
+
+  color:#fff!important; 
+
+  border:#fdbf65 1px solid; 
+
+  background-color:#fde0b6;
+
+}
+
+#pages_r ul li{padding:0px 10px;cursor:pointer;border:1px solid #DDDDDD;color:#88AF3F;margin-right:2px;padding:2px 5px;text-decoration:none;}
+
+/****banner switch*****/
+
+.banner { margin:0px; padding:0px;}
+
+.mrwm_slide .mrwm_slist{width:580px;height:20px;overflow:hidden;border:0px solid #f5f5f5; border-left:0px;cursor:pointer; background:#ffffff none;}
+
+.mrwm_slide .mrwm_slist li{ background:#eeeeee none; height:20px; float:left; padding:4px 0; width:193px; text-align:center; border-left:0px solid #f5f5f5; color:#000;}
+
+.mrwm_slide .mrwm_slist .select{background:#FA8324 none; color:#fff;}
+
+.imgScroll { width:577px;height:212px;overflow:hidden; border:1px solid #f5f5f5;}
+
+.imgScroll img{border:0px;}
+
+.imgScroll ul {margin:0;padding:0;width:3000px;height:212px;overflow:hidden; list-style: none; padding:0;}
+
+.imgScroll ul li {float:left;width:578px;height:212px;overflow:hidden}
+
+.banner_wenziscroll {margin-top:2px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; border: 0; outline: 0; }
+
+.banner_wenziscroll ul {list-style: none;   margin:0px; padding:0;}
+
+/*****product attribute******/
+
+#productAttributes {	
+
+	margin:10px 0 5px;
+
+	overflow:hidden;
+
+	width:350px;
+
+}
+
+.wrapperAttribsOptions{
+
+	  display:block; 
+
+	  width:100%;
+
+	  float:left;
+
+	  margin-bottom:10px;
+
+}
+
+.optionName {
+
+	float:left;
+
+	line-height:100%;
+
+	overflow:hidden;
+
+	padding:0.5em;
+
+	padding-top:0.6em;
+
+	padding-left:9px;
+
+	text-align:right;
+
+	width:85px;
+
+}
+
+.optionValues {
+
+	padding:0.2em;
+
+}
+
+.optionValues select{
+
+    width:200px;
+
+	border:1px solid #B6B6B6;
+
+}
+
+.cart_attr {
+
+	background:none repeat scroll 0 0 transparent;
+
+	color:#FF9933;
+
+	font-family:Georgia,"Times New Roman",Times,serif;
+
+	font-size:10px;
+
+	font-weight:normal;
+
+	list-style:none outside none;
+
+	padding:2px 0 0 10px;
+
+	text-decoration:none !important;
+
+}
+
+.attr_must_sel{
+
+   border:1px solid #FF0000!important;
+
+}
+
+/*****wedding include html**********/
+
+.style1 {color: #0000FF}
+
+.style2 {
+
+	color: #FF0000;
+
+	font-weight: bold;
+
+}
+
+#frameContent{
+
+	width:97%;         /*调整显示区的宽*/
+
+	height:288px;         /*调整显示区的高*/
+
+	line-height:18px;
+
+	border:1px solid 000000;
+
+	overflow-pageINdex:hidden;
+
+	overflow-y:hidden;
+
+	word-break:break-all;
+
+}
+
+#frameContent a{
+
+font-size:12px;
+
+color:000000;
+
+text-decoration:underline;
+
+}
+
+#frameContent a:hover{
+
+font-size:12px;
+
+color:CC0000;
+
+text-decoration:underline;
+
+}
+
+.neue2 ul p {
+
+	width:253px;
+
+	float:left;
+
+	margin:0;
+
+}
+
+#pages {
+
+	padding-right:10px;
+
+	text-align:right;
+
+}
+
+
+
+.strong1 {
+
+	background-color: #D9D9D9;
+
+}
+
+.STYLE6 {
+
+	background-color: #D9D9D9;
+
+	color: #FF0000;
+
+	font-weight: bold;
+
+}
+
+/*****404 style****************/
+
+#pageNotFoundHeading { text-align:center; color:#fb8200;}
+
+.erro_content{ border:1px solid #f1f1f1; padding:10px; font-size:14px; margin-left:-10px; color:#fb8200; text-align:center;}
+
+/*****one page desc and review style*****/
+
+
+
+/****star special show***/
+
+.shop-rating {height: 25px;overflow: hidden;zoom: 1;padding: 2px 0px;position: relative;z-index: 999;}   
+
+.shop-rating span {height: 23px;display: block;line-height: 23px;float: left;padding-top:2px;}   
+
+.shop-rating span.title {width: 250px;margin-right: 5px;}   
+
+.shop-rating ul {float: left;margin-top:6px;padding:0}   
+
+.shop-rating .result {margin-left: 20px;padding-top: 2px;}   
+
+.shop-rating .result span {color: #ff6d02;}   
+
+.shop-rating .result em {color: #f60;font-family: arial;font-weight: bold;}   
+
+.shop-rating .result strong {color: #666666;font-weight: normal;}   
+
+.rating-level {background-position: 0px 0px; width: 120px;height: 23px;position: relative;z-index: 1000;}   
+
+.rating-level li {display: inline; cursor:pointer;}   
+
+.rating-level li {line-height: 23px;height: 23px;/*position: absolute;*/top: 0px;left: 0px;/*text-indent: -999em;*/*zoom: 1;outline: none;}   
+
+#reviews_write_title { color:#000; padding:5px 0;}
+
+.reviews_prompt { padding-bottom:0; padding-left:10px;}
+
+.rating_star { width:370px; float:left;}
+
+.ratingdiv2 { float:left;}
+
+
+
+.reviews_write p { padding:0; padding-bottom:5px;}
+
+
+
+#div_review_btn { padding-bottom:10px;}
+
+
+
+#review_text {height:80px;width:410px;}
+
+
+
+
+
+#reviews_write_title { color:#000; padding:5px 0;}
+
+.reviews_prompt { padding-bottom:0; padding-left:10px;}
+
+.reviews_prompt p { margin:0;}
+
+.ratingdiv2 {float:right;width:430px; height:120px; }
+
+.ratingdiv2 p { margin:5px 0;}
+
+
+
+/*这些和服务器上的css重复了，但是会自动覆盖掉网站的样式*/
+
+.reviews_write {width:310px; float:left; height:120px;}
+
+.shop-rating span.title {width:165px;}
+
+.rating-level { width:110px;}
+
+.shop-rating .result {margin-left:5px;}
+
+.reviews_write p { padding:0; padding-bottom:10px;}
+
+#div_review_btn { padding-bottom:10px; padding-right:10px; text-align:right;}
+
+.reviews_evaluate { color:#fb8200;}
+
+/*这些和服务器上的css重复了，但是会自动覆盖掉网站的样式*/
+
+
+
+.bg_f8 { background:#f8f8f8;}
+
+/*.infiniteCarousel { margin:0; border-top:none; float:left; width:576px;}*/
+
+.Spry_css {width:578px; margin-top:10px;}
+
+.lb ul{ list-style:none; margin:0px; padding:0px;}
+
+.lb li{float:left; width:289px; text-align:center; height:27px; line-height:27px; background:url("../images/index_tab_bg2.gif") no-repeat;}
+
+.lb a{display:block; text-decoration:none;}
+
+.lb a span{display:block; color:#000;}
+
+.l a { background:url("../images/index_tab_bg.gif") no-repeat;}
+
+.l a{margin:0px;text-decoration:none; font-size:12px; font-weight:bold; }
+
+.fea_price{
+
+    color:#FB8200;
+
+	font-size:12px;
+
+}
+
+
+
+/****price filter and listing sort****/
+
+.sort_price li { line-height:30px; border-bottom:1px solid #f0f0f0;}
+
+.sort_price h4 { background-color:#F0F0F0; font-size:13px;margin:0; text-indent:5px;}
+
+.sort_price h6 { font-size:12px;color:#fb8200; margin:0; padding-left:5px;}
+
+.sort_price li a { padding-left:10px;}
+
+.sort_price li input { width:30px;}
+
+.text_center { text-align:center;}
+
+
+
+.show_sort { float:right;}
+
+
+
+
+
+.product_sort { background:#f9f9f9;}
+
+.directory_h1 { float:left;}
+
+.sort_price { float:right; width:523px; margin:0; padding:0;}
+
+.sort_price a { padding:0 5px;}
+
+.sort_price_current { padding:3px; border:1px solid #92cf0a; background:#ECFCB4;}
+
+
+
+.gray_date{
+
+  color:#cccccc;
+
+}
+
+/*评级*/
+
+.rating { background:#eee;margin-top:10px;}
+
+.rating p { padding:5px;margin:0px;}
+
+.rating_star2 { padding-right:20px;}
+
+.rating_star2 img { vertical-align:bottom;}
+
+.rating_reviews { vertical-align:top;}
+
+.rating_view{width:300px;}
+
+.rating_view a{ padding-left:20px; color:#fb8200;}
+
+.ps_selected_tip{
+	 color:#CC0033;
+}
+
+
+/*******************************结账*************************************************/
+
+.fixwidth {
+    margin: 0 auto;
+    max-width: 1004px;
+}
+.shopcar_gods {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.outline_note {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url(../images/extag_repeat.png) repeat-x scroll 0 -1494px rgba(0, 0, 0, 0);
+    border-color: #DCDCDC #DCDCDC -moz-use-text-color;
+    border-image: none;
+    border-radius: 6px 6px 0 0;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+    color: #E47911;
+    font-size: 16px;
+    font-weight: bold;
+    height: 37px;
+    line-height: 37px;
+    padding-left: 15px;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
+}
+
+.paypag_table {
+    border-color: #F0F0F0;
+    border-spacing: 0;
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+}
+
+.paypag_table th {
+    background: none repeat scroll 0 0 #FBFBFB;
+    height: 27px;
+    line-height: 27px;
+}
+.paypag_table td {
+    padding: 10px;
+}
+.paypag_table td, .paypag_table th {
+    border-color: #F0F0F0;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+}
+
+.fixwidth .header {
+    overflow: hidden;
+}
+
+.thread {
+    overflow: hidden;
+}
+.thread ul {
+    margin: 38px auto 0;
+    position: relative;
+    width: 525px;
+    z-index: 1;
+}
+.thread .prcs_b, .thread .prcs_c {
+    border-top: 1px solid #CC0000;
+}
+
+.prcs_b .car_process {
+    left: 175px;
+}
+.car_process {
+    background: url(../images/efoxtages.png);
+	background-repeat:no-repeat;
+	background-position:0 -388px;
+    height: 22px;
+    left: 0;
+    position: absolute;
+    top: -18px;
+    width: 175px;
+    z-index: 2;
+}
+
+
+.thread ul li {
+    display: inline;
+    float: left;
+    margin-top: -7px;
+    padding-top: 17px;
+    text-align: center;
+    width: 175px;
+}
+.prcs_b li.afir {
+    color: #BB5F5F;
+}
+.prcs_b li.bsec {
+    color: #A90000;
+}
+
+.thread ul li.clst {
+    background: url(../images/efoxtages.png) no-repeat scroll 0 -424px rgba(0, 0, 0, 0);
+}
+
+ .clientinfo{border:1px solid #F0F0F0;border-radius:6px 6px 0 0;margin-top:20px;overflow:hidden;}
+  .clientinfo dt{background:url("../images/extag_repeat.png") repeat-x scroll 0 -1494px rgba(0, 0, 0, 0);
+  font-size:16px;height:37px;line-height:37px;text-indent:15px;text-shadow:0 1px 0 #FFFFFF;
+  font-weight:bold;
+  color: #E47911;
+  }
+  .clientinfo dd{padding:0 15px;margin:10px 0;}

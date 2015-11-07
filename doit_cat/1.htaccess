@@ -1,0 +1,14 @@
+<IfModule mod_setenvif.c>
+  <IfDefine SSL>
+    SetEnvIf User-Agent ".*MSIE.*" \
+             nokeepalive ssl-unclean-shutdown \
+             downgrade-1.0 force-response-1.0
+  </IfDefine>
+</IfModule>
+RewriteEngine on
+RewriteBase /dobetter/
+AuthType Basic
+AuthName "Web Krontrolle"
+AuthUserFile /home/efoxshop/.htpasswds/.newefoxshop
+AuthGroupFile /dev/null
+Require valid-user

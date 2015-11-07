@@ -1,0 +1,39 @@
+.city_path { margin-left:0;}
+.city_left, .city_right {float:left;}
+.city_left { width:175px; margin-right:10px;}
+.city_right {width:817px;}
+.city_menu { border:1px solid #ccc; line-height:26px; font-size:11px;}
+.city_menu dt { background:#f5f5f5; font-weight:bold; padding-left:10px; color:#727272;}
+.city_menu dd { border-top:1px solid #ccc; padding-left:10px;}
+.city_menu h3{background:#EEECDD; color:#727272; margin:0; padding-left:10px; border-bottom:1px solid #ccc;}
+
+.cities_table { border-top:1px solid #ccc;}
+.cities_table table { border-collapse:collapse;}
+.cities_table2 td {border:1px solid #ccc; padding:10px;}
+.cities_table a { font-size:11px;}
+.cities_table td {border-bottom:1px solid #ccc;}
+.cities_table td a strong { font-size:14px; color:#92cf0a;}
+
+.city_Details { border:1px solid #ccc; margin:10px 0;}
+.city_Details_title { padding-left:10px; font-size:14px; font-weight:bold; background:#f5f5f5; line-height:30px; border-bottom:1px solid #ccc;}
+.city_Details_content { padding:10px; font-size:11px; color:#727272; line-height:21px;}
+
+.city_right_product h2 { font-size:12px;}
+.city_right_product ul li { float:left; padding:15px; width:170px;}
+
+.city_Details_city { border:1px solid #ccc; background:#f1f1f1;}
+.city_Details_city h4 {color:#fb8200; margin:0; text-indent:10px; line-height:30px;}
+.city_Details_city ul li { width:49%; float:left; text-indent:2em; line-height:26px;}
+.city_Details_li { background:url("../images/cityli_bg.jpg") no-repeat center;}
+.city_Details_li img{text-align:center;}
+
+/*城市列表项css*/
+.cities_key { margin-top:10px;}
+.cities_key ul { width:193px; float:left; padding-left:10px; line-height:20px; overflow:hidden;}
+.cities_key ul h4 { margin:0;}
+.cities_key ul a {display:block; padding-left:20px;}
+.cities_key ul h4 a { padding-left:0; color:#fb8200;}
+#border_r_none { border-right:none;}
+
+#region_category_class { height:160px; text-align:center;}
+#region_category_class p { text-align:left;}
