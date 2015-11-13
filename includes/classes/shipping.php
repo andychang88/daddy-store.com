@@ -23,7 +23,7 @@ class shipping extends base {
   // class constructor
   function shipping($module = '') {
     global $PHP_SELF, $messageStack;
-	
+	reset($this->modules);
     if (defined('MODULE_SHIPPING_INSTALLED') && zen_not_null(MODULE_SHIPPING_INSTALLED)) {
       $this->modules = explode(';', MODULE_SHIPPING_INSTALLED);
 
@@ -38,7 +38,7 @@ class shipping extends base {
           $include_modules[] = array('class' => $class, 'file' => $value);
         }
       }
-	
+	//$test3= array();
       for ($i=0, $n=sizeof($include_modules); $i<$n; $i++) {
         //          include(DIR_WS_LANGUAGES . $_SESSION['language'] . '/modules/shipping/' . $include_modules[$i]['file']);
         $lang_file = zen_get_file_directory(DIR_WS_LANGUAGES . $_SESSION['language'] . '/modules/shipping/', $include_modules[$i]['file'], 'false');
@@ -59,7 +59,7 @@ class shipping extends base {
 		G('initShippingModule_'.$include_modules[$i]['file'].'_BeginNew');
 		
         $GLOBALS[$include_modules[$i]['class']] = new $include_modules[$i]['class'];
-        
+        //$test3p[$include_modules[$i]['class']] = $GLOBALS[$include_modules[$i]['class']];
         
         G('initShippingModule_'.$include_modules[$i]['file'].'_End');
       }
@@ -122,9 +122,9 @@ class shipping extends base {
     if (is_array($this->modules)) {
       $include_quotes = array();
 	
-      reset($this->modules);
-      while (list(, $value) = each($this->modules)) {
-        $class = substr($value, 0, strrpos($value, '.'));
+      $all_modules = $this->modules;
+      foreach ($all_modules as $value){
+      	$class = substr($value, 0, strrpos($value, '.'));
 		
         if (zen_not_null($module)) {
           if ( ($module == $class) && ($GLOBALS[$class]->enabled) ) {
@@ -134,6 +134,7 @@ class shipping extends base {
           $include_quotes[] = $class;
         }
       }
+      
 	
       $size = sizeof($include_quotes);
 	  

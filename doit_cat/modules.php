@@ -134,7 +134,7 @@
           <tr>
             <td class="pageHeading"><?php echo HEADING_TITLE; ?>
             <?php if ($set == 'payment' || $set == 'shipping') {?>
-			<br>sort order提示:绿色表示可用；<span style="color:red;">黄色表示不可用但是有排序值；红色表示不可用并且没有排序值</span>。
+			<br>sort order的值不能为0；sort order提示:绿色表示可用；<span style="color:red;">黄色表示不可用但是有排序值；红色表示不可用并且没有排序值</span>。
 			<?php }?>
             </td>
             <td class="pageHeading" align="right"><?php echo zen_draw_separator('pixel_trans.gif', HEADING_IMAGE_WIDTH, HEADING_IMAGE_HEIGHT); ?></td>
