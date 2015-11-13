@@ -76,7 +76,7 @@
   define('DB_PREFIX', '');
   define('DB_SERVER','127.0.0.1');
   define('DB_SERVER_USERNAME', 'root');
-  define('DB_SERVER_PASSWORD', '');
+  define('DB_SERVER_PASSWORD', ''); 
   define('DB_DATABASE', 'changah_daddystore');
   define('USE_PCONNECT', 'false');
   define('STORE_SESSIONS', 'db');
