@@ -87,7 +87,7 @@ z-index:-1;
 #care_right{  /*右边的文本框之类*/
 height:100%;
 overflow:hidden;
-margin-left:230px;
+margin-left:230px;padding-left:100px;
 }
 .searchnote{
 margin-left:-60px;
@@ -108,8 +108,8 @@ font-size:14px;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: bold;
-	margin-right:485px;
-	height:37px;
+	margin-right:425px;
+	height:35px;
 	float:right;
     z-index: 2;
     padding:8px 5px;
@@ -520,8 +520,8 @@ float:right;
 }
 
 .rightbody{
-float:right;width: 300px;height:500px;
-margin-top:20px;margin-left:15px;
+float:right;width: 280px;height:500px;
+margin-top:20px;margin-left:15px;overflow:hidden;
 }
 .centron{
 	overflow:hidden;
