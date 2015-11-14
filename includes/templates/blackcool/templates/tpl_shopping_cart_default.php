@@ -65,7 +65,8 @@
 					<th  bgcolor="#E1E1E1"><?php echo TEXT_REMOVE_ARTICLE;?></th>
 				</tr>
 				<?php foreach ($productArray as $product) {
-						$tmp_products_id=str_replace(':','_',$product['id']);						
+						$tmp_products_id=str_replace(':','_',$product['id']);
+									
 				?>
 				<?php echo zen_draw_form('cart_quantity_'.$product['id'],'','post','id="cart_'.$tmp_products_id.'"');?>
 						<tr id="trpid_<?php echo $tmp_products_id;?>">

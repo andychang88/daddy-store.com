@@ -124,7 +124,7 @@ function update_cart_form(formData,_pid){
 						if( (dd[0].delete_action && dd[0].delete_action==1) || item_qty==0){
 							var del_row=document.getElementById('trpid_'+_pid);
 							if(del_row){
-								del_row.parentNode.removeChild(del_row);
+								del_row.remove();
 							}
 						}	
 

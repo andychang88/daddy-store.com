@@ -1063,13 +1063,14 @@ class shoppingCart extends base {
     $products_array = array();
     reset($this->contents);
     while (list($products_id, ) = each($this->contents)) {
+    	
       $products_query = "select p.products_id, p.master_categories_id, p.products_status, pd.products_name, p.products_model, p.products_image,
                                   p.products_price, p.products_weight, p.products_tax_class_id,
                                   p.products_quantity_order_min, p.products_quantity_order_units,
                                   p.product_is_free, p.products_priced_by_attribute,
                                   p.products_discount_type, p.products_discount_type_from
                            from " . TABLE_PRODUCTS . " p, " . TABLE_PRODUCTS_DESCRIPTION . " pd
-                           where p.products_id = '" . (int)$products_id . "'
+                           where p.products_id = '" . $products_id . "'
                            and pd.products_id = p.products_id
                            and pd.language_id = '" . (int)$_SESSION['languages_id'] . "'";
 
@@ -1184,7 +1185,7 @@ class shoppingCart extends base {
           $new_qty = (int)$new_qty;
         }
 
-        $products_array[] = array('id' => (int)$products_id,
+        $products_array[] = array('id' => $products_id,
                                   'category' => $products->fields['master_categories_id'],
                                   'name' => $products->fields['products_name'],
                                   'model' => $products->fields['products_model'],

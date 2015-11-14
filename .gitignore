@@ -1,3 +1,6 @@
 cache/
+bmz_cache/
+images/
+.settings/
 configure.php*
 logs/

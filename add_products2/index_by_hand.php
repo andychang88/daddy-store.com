@@ -76,9 +76,9 @@ if($act == 'save_detail'){
 	$products_cat = $_REQUEST['products_cat'];
 	//产品主图----end
 	$insert_product_desp['language_id'] = $_REQUEST['language_id'];
-	$insert_product_desp['products_name'] = $_REQUEST['products_name'];
+	$insert_product_desp['products_name'] = addslashes($_REQUEST['products_name']);
 	$insert_product_desp['products_description'] = addslashes($_REQUEST['products_description']);
-	$insert_product_desp['products_short_description'] = $_REQUEST['products_short_description'];
+	$insert_product_desp['products_short_description'] = addslashes($_REQUEST['products_short_description']);
 	
 	$site_name = 'all';
 	
@@ -218,6 +218,7 @@ function addProductImage(){
 	
 	little_image.attr('name', 'little_image[]');
 	little_image.attr('id', little_img_id);
+	little_image.val('');
 	
 	main_image.parent().append(little_image);
 	main_image.parent().append('<a href="javascript:void(0);" style="color:red;" onclick="$(\'#'+little_img_id+'\').remove();$(this).remove();">&nbsp;&nbsp;删除该子图</a>');
