@@ -129,8 +129,11 @@ for ($i=0, $n=sizeof($products); $i<$n; $i++) {
       $flagAnyOutOfStock = true;
     }
   }
-  $linkProductsImage = zen_href_link(zen_get_info_page($products[$i]['id']), 'products_id=' . $products[$i]['id']);
-  $linkProductsName = zen_href_link(zen_get_info_page($products[$i]['id']), 'products_id=' . $products[$i]['id']);
+  
+  $realPid = zen_get_prid($products[$i]['id']);
+  
+  $linkProductsImage = zen_href_link(zen_get_info_page($realPid), 'products_id=' . $realPid);
+  $linkProductsName = zen_href_link(zen_get_info_page($realPid), 'products_id=' . $realPid);
   $productsImage = (IMAGE_SHOPPING_CART_STATUS == 1 ? zen_image(DIR_WS_IMAGES . $products[$i]['image'], $products[$i]['name'], IMAGE_SHOPPING_CART_WIDTH, IMAGE_SHOPPING_CART_HEIGHT) : '');
   $show_products_quantity_max = zen_get_products_quantity_order_max($products[$i]['id']);
   $showFixedQuantity = (($show_products_quantity_max == 1 or zen_get_products_qty_box_status($products[$i]['id']) == 0) ? true : false);
