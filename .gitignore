@@ -1,4 +1,5 @@
 cache/
-configure.php
+configure.php*
 includes/configure.php
 doit_cat/includes/configure.php
+chan.txt
