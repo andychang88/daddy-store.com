@@ -3,11 +3,7 @@
 	
   <?php
   // following used for setting style type of order total and discount modules only
-    $selection =  $order_total_modules->credit_selection();
-    $numselection = sizeof($selection);
-    if (FEC_SPLIT_CHECKOUT == 'true') {
-      $selectionStyle = ($numselection%2 == 0 ? 'split' : '');
-    }
+    
     G('templage credit_selection');
     
   ?>
@@ -23,7 +19,9 @@
   
   
   <?php include(DIR_WS_TEMPLATE . 'templates/fec/tpl_modules_order_content.php');?>
-  <?php include(DIR_WS_TEMPLATE . 'templates/fec/tpl_modules_order_coupon.php');?>
+  
+  
+  
   <?php include(DIR_WS_TEMPLATE . 'templates/fec/tpl_modules_order_address.php');//送货地址、账单地址?>
   
   <?php 
@@ -177,10 +175,15 @@
     <?php G(' shipping method selection module finish ');/**************************物流方式模块列表结束**********************/ ?>
     
     
+    <?php // include(DIR_WS_TEMPLATE . 'templates/fec/tpl_modules_order_coupon.php');?>
+    
+    
+    
     <?php /**************************订单费用汇总开始**********************/ ?>
     <dl class="clientinfo">
                         <dt>Order Information</dt>
                         <dd>
+                        
                             <div class="fl leavemsg">
                                 <p class="leave_note">Special requirement or comments about the order:</p>
                                 <?php echo zen_draw_textarea_field('comments', '25', '5'); ?>

@@ -1,5 +1,6 @@
 cache/
+bmz_cache/
+images/
+.settings/
 configure.php*
-includes/configure.php
-doit_cat/includes/configure.php
-chan.txt
+logs/

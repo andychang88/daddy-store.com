@@ -19,6 +19,8 @@
 		$_SESSION['cart']->actionAJAXAddProduct();
 		$items_count=$_SESSION['cart']->count_contents();
 		$total_amount=$_SESSION['cart']->show_total();
+		$items_in_cart=$_SESSION['cart']->get_products();
+		
 		
 		$result_data=array('items_count'=>$items_count,
 						   'total_amount'=>$currencies->display_price($total_amount)

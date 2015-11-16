@@ -5,7 +5,7 @@ $(document).ready(function(){
 </script>
   <style type="text/css">
 	.rowsgods .rows5 .plist{width:20%}
-	.rowsgods .rows4 .plist{width:25%}
+	.rowsgods .rows4 .plist{width:22%}
 	.rowsgods .rows3 .plist{width:33.33%}
 	
   </style>
@@ -43,27 +43,7 @@ $(document).ready(function(){
 			      </style>
 				
 				<div class="centrows">
-					<div class="rowsleft">
-						     <div class="newsletter">
-						       <p class="rednote">Newsletter</p>
-						       <p>
-							 <span class="emailinfo"></span>
-							</p>
-							<p>
-							  <input id="email" class="email_input" type="text" name="email">
-							 </p>
-							 <p>
-							     <span class="btn_zurm">
-								 <input id="btnnewsletter" class="btn_zurm_in" type="button" value="Subscribe" >
-							     </span>
-							 </p>
-						     </div>
-				     
-						     <div class="abbrands">
-							     <h4>Top Brand</h4>
-							     <?php echo zen_display_banner_by_groupd('TopBrand');?>
-						     </div>
-					</div>      
+					
 				      
 				
 				      

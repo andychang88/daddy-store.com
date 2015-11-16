@@ -1,14 +1,20 @@
 
 
-
+<?php 
+  $selection =  $order_total_modules->credit_selection();
+    $credit_numselection = sizeof($selection);
+    if (FEC_SPLIT_CHECKOUT == 'true') {
+      $selectionStyle = ($credit_numselection%2 == 0 ? 'split' : '');
+    }
+?>
 	<dl class="clientinfo" id="code">
                         <dt>Coupon Code</dt>
                         <dd>
 			  
-			  <?php if ($numselection>0) { ?>
+			  <?php if ($credit_numselection>0) { ?>
 			  
 			  <?php
-				for ($i = 0; $i < $numselection; $i++) {
+				for ($i = 0; $i < $credit_numselection; $i++) {
 					if ($selectionStyle == 'split') {
 					  // $i starts at 0
 					  if ($i%2 == 0) $box = 'odd'; else $box = 'even';
@@ -20,7 +26,7 @@
 			  <?php }?>	
 			  
 						
-			 <?php
+			 <?php 
 			 		$tmp_payment = $selection[$i];
 			 		$num_fields = count($tmp_payment['fields']);
 			 		

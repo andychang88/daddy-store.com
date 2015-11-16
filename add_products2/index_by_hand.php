@@ -76,9 +76,9 @@ if($act == 'save_detail'){
 	$products_cat = $_REQUEST['products_cat'];
 	//产品主图----end
 	$insert_product_desp['language_id'] = $_REQUEST['language_id'];
-	$insert_product_desp['products_name'] = $_REQUEST['products_name'];
+	$insert_product_desp['products_name'] = addslashes($_REQUEST['products_name']);
 	$insert_product_desp['products_description'] = addslashes($_REQUEST['products_description']);
-	$insert_product_desp['products_short_description'] = $_REQUEST['products_short_description'];
+	$insert_product_desp['products_short_description'] = addslashes($_REQUEST['products_short_description']);
 	
 	$site_name = 'all';
 	
@@ -114,8 +114,10 @@ html,body{font-family:tahoma,arial,宋体,sans-serif;font-size:12px;padding:0px;
 table{width:100%;border-collapse:collapse;border:1px solid #ccc;}
 td{padding:5px 10px;border:1px solid #ccc;}
 .align_right{text-align:right;}
+.valign_top{vertical-align:top;font-size:15px;font-weight:bold;}
 .tip{font-weight:bold;padding:10px;color:red;text-align:center;}
 .steps{margin:10px;}
+.hidden{display:none;}
 </style>
 <script language=javascript>
 
@@ -218,6 +220,7 @@ function addProductImage(){
 	
 	little_image.attr('name', 'little_image[]');
 	little_image.attr('id', little_img_id);
+	little_image.val('');
 	
 	main_image.parent().append(little_image);
 	main_image.parent().append('<a href="javascript:void(0);" style="color:red;" onclick="$(\'#'+little_img_id+'\').remove();$(this).remove();">&nbsp;&nbsp;删除该子图</a>');
@@ -256,7 +259,7 @@ function addProductImage(){
 	?>
 	
 	
-	<tr><td class="align_right">网站名:</td>
+	<tr class="hidden"><td class="align_right">网站名:</td>
 	<td>
 		<select name="site_name">
 			<option value="all">2个</option>
@@ -267,25 +270,26 @@ function addProductImage(){
 	</tr>
 	
 	
-	<tr><td class="align_right">是否设置产品属性:</td>
-	<td><input type="radio" name="is_set_attr" value="0" onclick="setAttrState(0)" checked />不设置   
-	<input type="radio" name="is_set_attr" id="is_set_attr_1" value="1" onclick="setAttrState(1)"  />设置   
+	<tr class="hidden"><td class="align_right">是否设置产品属性:</td>
+	<td><input type="radio" name="is_set_attr" value="0" onclick="setAttrState(0)"  />不设置   
+	<input type="radio" name="is_set_attr" id="is_set_attr_1" value="1" checked onclick="setAttrState(1)"  />设置   
 	</td>
 	</tr>
 	
+	<tr class="hidden"><td class="align_right">产品sn:</td>
+	<td><input type="text" style="width:100%;" name="products_model" value="<?php echo $products_model;?>" />（默认值为自动生成的sn）</td>
+	</tr>
 	
 	
-	<tr><td class="align_right">英语语言id:</td>
+	<tr class="hidden"><td class="align_right">英语语言id:</td>
 	<td><input type="text" style="width:100%;" name="language_id" value="3" /> <span class="tip">对于我自己的backever网站来说，英语语言id是3；其他人的网站英语语言一般是1（如果这个设置错误，在zencart网站上面看不到新添加的产品）</span></td>
 	</tr>
 	
 	
-	<tr><td class="align_right">要抓取的产品名:</td>
+	<tr><td width="15%" class="align_right">要抓取的产品名:</td>
 	<td><input type="text" style="width:100%;" name="products_name" value="<?php echo $products_name;?>" /></td>
 	</tr>
-	<tr><td class="align_right">产品sn:</td>
-	<td><input type="text" style="width:100%;" name="products_model" value="<?php echo $products_model;?>" />（默认值为自动生成的sn）</td>
-	</tr>
+	
 	
 	<tr><td class="align_right">主图片地址:<br><a href="javascript:addProductImage();">添加子图</a></td>
 	<td><input type="text" style="width:90%;" name="products_image"  id="products_image" value="<?php echo $products_image;?>" /></td>
@@ -298,13 +302,21 @@ function addProductImage(){
 	<td><input type="text" style="width:100%;" name="products_price" value="<?php echo $products_price;?>" /></td>
 	</tr>
 	
+	<?php if(0){?>
 	<tr><td class="align_right">产品简述:</td>
 	<td>
 	<?php echo $FCKeditor_short_desp;?>
 	</td>
 	</tr>
+	<?php }?>
 	
-	<tr><td class="align_right">产品描述:</td>
+	<tr><td colspan=2>
+	<?php 
+include 'aliexpress_attr_html.php';
+?>
+	<br></br>
+	</td></tr>
+	<tr><td class="align_right valign_top">产品描述:</td>
 	<td>
 	<?php echo $FCKeditor;?>
 	</td>
@@ -317,9 +329,6 @@ function addProductImage(){
 </table>
 
 
-<?php 
-include 'aliexpress_attr_html.php';
-?>
 
 
 </form>

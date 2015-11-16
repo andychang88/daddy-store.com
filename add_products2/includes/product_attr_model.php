@@ -28,7 +28,7 @@ class ProductAttrModel extends CommonBase{
 	}
 	
 	function getAllAttributes(){
-		$sql = "select * from products_options where language_id=".$this->language." order by products_options_name asc ";
+		$sql = "select * from products_options where language_id=".$this->language." and trim(products_options_name) !='' and not isnull(products_options_name) order by products_options_name asc ";
 		$rows = $GLOBALS['db']->getAll($sql);
 		return $rows;
 	}

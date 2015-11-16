@@ -38,8 +38,8 @@ if ($tmp_cat_id) {
 						   <a href="<?php echo $product['products_url_link'];?>" title="<?php echo $product['products_name'];?>">
 								    <?php echo zen_image(DIR_WS_IMAGES.$product['products_image'],
 														addslashes($product['products_name']),
-														140,
-														140,' class="float_left"');
+														180,
+														200,' class="float_left"');
 									 ?>                   
 						   </a>
 						</dt>

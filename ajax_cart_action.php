@@ -8,7 +8,7 @@
 		echo json_encode(array('error'=>'Invalid parameter pid----1'));
 		exit;
 	}else if(is_string($_POST['products_id'])){
-		$pid_check=split(':',$_POST['products_id']);
+		$pid_check=explode(':',$_POST['products_id']);
 		$real_pid=$pid_check[0];
 		if(!is_numeric($real_pid) || $real_pid<=0){
 			echo json_encode(array('error'=>'Invalid parameter1 pid----2'));

@@ -50,8 +50,8 @@
 
   require('includes/application_top.php');   
   require('includes/check_allowed_access.php');
-  
-  if ($current_page_base == 'account' || (isset($_GET['ucenter']) && $_GET['ucenter'] == 1) ) {
+   
+  if ( $current_page_base == 'account' || (isset($_GET['ucenter']) && $_GET['ucenter'] == 1) ) {
   	$user_in_center = true;
   }else{
   	$user_in_center = false;
