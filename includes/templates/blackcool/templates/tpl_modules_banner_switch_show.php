@@ -34,13 +34,27 @@ function indexbanner(namebar){
 		set.indent=set.indent>=leg?0:set.indent;
 		MoveBar(set.indent);
 	}
-	//var intervaltime=setInterval(AutoAddBar,set.interval);
+	var intervaltime=setInterval(AutoAddBar,set.interval);
+	/**
 	set.lit.find("li").click(function(){
 		//clearInterval(intervaltime);
 		set.indent=set.lit.find("li").index($(this));
 		MoveBar(set.indent);
 		//intervaltime=setInterval(AutoAddBar,set.interval);
 	});
+	/**/
+	set.lit.find("li").hover(function(){
+		clearInterval(intervaltime);
+		set.indent=set.lit.find("li").index($(this));
+		MoveBar(set.indent);
+	},function(){
+		clearInterval(intervaltime);
+		set.indent=set.lit.find("li").index($(this));
+		intervaltime=setInterval(AutoAddBar,set.interval);
+	});
+
+	
+	
 	set.leftbtn.click(function(){
 		set.indent--;
 		set.indent = set.indent<0?leg-1:set.indent;

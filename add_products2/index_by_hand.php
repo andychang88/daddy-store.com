@@ -286,7 +286,7 @@ function addProductImage(){
 	</tr>
 	
 	
-	<tr><td width="15%" class="align_right">要抓取的产品名:</td>
+	<tr><td width="10%" class="align_right">要抓取的产品名:</td>
 	<td><input type="text" style="width:100%;" name="products_name" value="<?php echo $products_name;?>" /></td>
 	</tr>
 	

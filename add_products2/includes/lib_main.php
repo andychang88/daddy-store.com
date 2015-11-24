@@ -58,29 +58,10 @@ function addProductBackEver($arr=array()){
 	if(empty($site_name)){
 		die('Please select a site.');
 	}
-	$site_arr = array();
-	if($site_name == 'all'){
-		
-		$site_arr=array('changah_andy02','changah_usbexporter');
-		
-	}elseif($site_name == 'backever'){
-		
-		$site_arr=array('changah_andy02');
-		
-	}elseif($site_name == 'usbexporter'){
-		
-		$site_arr=array('changah_usbexporter');
-		
-	}
 	
-	if(preg_match('/www.bk.com/',$_SERVER[HTTP_HOST])){
-		$site_arr=array('usbexporter');
-	}
 	
-	if(IS_LOCALHOST && isset($GLOBALS['update_database'])){
-		$site_arr=$GLOBALS['update_database'];
-	}
-	
+	$site_arr=array('changah_daddystore');
+
 	foreach ($site_arr as $site){
 		
 		$GLOBALS['db']->query("use $site");
