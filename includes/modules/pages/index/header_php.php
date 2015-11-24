@@ -55,7 +55,7 @@ $listing = $db->Execute($listing_sql);
 // if filter_id exists the 1 product redirect is ignored
 if (SKIP_SINGLE_PRODUCT_CATEGORIES=='True' and (!isset($_GET['filter_id']) and !isset($_GET['alpha_filter']))) {
   if ($listing->RecordCount() == 1) {
-    zen_redirect(zen_href_link(zen_get_info_page($listing->fields['products_id']), ($cPath ? 'cPath=' . $cPath . '&' : '') . 'products_id=' . $listing->fields['products_id']));
+    zen_redirect(zen_href_link(zen_get_info_page($listing->fields['products_id']), (0 ? 'cPath=' . $cPath . '&' : '') . 'products_id=' . $listing->fields['products_id']));
   }
 }
 
