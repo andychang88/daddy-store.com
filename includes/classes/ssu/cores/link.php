@@ -313,7 +313,7 @@
 				$cache_filename = md5($page.$parameters);
 				
 				foreach($parsers as $key => $parser){
-					if(call_user_func_array(array("{$parser}Parser", "identifyPage2"), array(&$page, $parameters)) !== false){
+					if(call_user_func_array(array("{$parser}Parser", "identifyPage2"), array($page, $parameters)) !== false){
 						if(($params = SSUCache::read("{$cache_filename}_{$languages_code}", 'pc')) !== false)
 							return $params;
 						$set_cache = true;
