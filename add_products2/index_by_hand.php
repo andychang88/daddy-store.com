@@ -69,8 +69,13 @@ if($act == 'save_detail'){
 		$insert_product['products_image'] = $new_products_image;
 	}
 	
-	$insert_product['products_model'] = $_REQUEST['products_model'];
-	$insert_product['products_afterbuy_model'] = $_REQUEST['products_model'];
+	$products_model = $_REQUEST['products_model']?$_REQUEST['products_model']:'';
+	if(empty($products_model)){
+		$products_model = 'D'.date('YmdHis');
+	}
+	
+	$insert_product['products_model'] = $products_model;
+	$insert_product['products_afterbuy_model'] = $products_model;
 	$insert_product['products_price'] = $_REQUEST['products_price'];
 	
 	$products_cat = $_REQUEST['products_cat'];
@@ -277,7 +282,7 @@ function addProductImage(){
 	</tr>
 	
 	<tr class="hidden"><td class="align_right">产品sn:</td>
-	<td><input type="text" style="width:100%;" name="products_model" value="<?php echo $products_model;?>" />（默认值为自动生成的sn）</td>
+	<td><input type="text" style="width:100%;" name="products_model" value="" />（默认值为自动生成的sn）</td>
 	</tr>
 	
 	
