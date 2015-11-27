@@ -141,7 +141,7 @@ class ProductAttrModel extends CommonBase{
 		$attr_options_id_arr = $this->options_values_id_arr;
 		$options_id = $this->options_id;
 		//echo '$options_id:'.$options_id;exit;
-		if(count($attr_options_id_arr) != count($attr_price)){
+		if($attr_options_id_arr && count($attr_options_id_arr) != count($attr_price)){
 			print("属性值和价格个数不匹配");
 			echo '<pre>POST值：<br>';print_r($_POST);
 			echo 'values_id_arr:<br>';print_r($attr_options_id_arr);

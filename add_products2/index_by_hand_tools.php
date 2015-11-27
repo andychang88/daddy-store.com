@@ -22,6 +22,7 @@ $setting_smt_account = $db->getAll($sql);
 if($act == 'resetProductImg'){
 	$products_id = $_REQUEST['products_id']?(int)($_REQUEST['products_id']):'';
 	$products_image_url = trim($_REQUEST['products_image']);
+	$products_image_url = preg_replace('/\?.*/i', '', $products_image_url);
 	
 	$sql = "select products_image from products where products_id= ".$products_id;
 	$old_products_image = $db->getOne($sql);
@@ -42,6 +43,9 @@ if($act == 'resetProductImg'){
 	$little_images = $_REQUEST['little_image'];
 	if ($little_images) {
 		foreach ($little_images as $key=>$little_img){
+			
+			$little_img = preg_replace('/\?.*/i', '', $little_img);
+			
 			$suffix = strrchr($new_products_image,'.');
 			$little_img_path = substr($new_products_image, 0, strpos($new_products_image, $suffix)).'_'.($key+1).$suffix;
 			

@@ -28,7 +28,7 @@ if($act == 'save_detail'){
 	//产品主图----begin
 	//产品图片前面不能有images/
 	$products_image = trim($_REQUEST['products_image']);
-	
+	$products_image = preg_replace('/\?.*/i', '', $products_image);
 	//如果输入的产品图片是外站的url
 	if(preg_match("#^http(s?)://#", $products_image)){
 		$new_products_image = date('Ymd').'/'.date('YmdHis').strrchr($products_image,'.');
@@ -52,6 +52,8 @@ if($act == 'save_detail'){
 	$little_images = $_REQUEST['little_image'];
 	if ($little_images) {
 		foreach ($little_images as $key=>$little_img){
+			$little_img = preg_replace('/\?.*/i', '', $little_img);
+			
 			$suffix = strrchr($insert_product['products_image'],'.');
 			$little_img_path = substr($insert_product['products_image'], 0, strpos($insert_product['products_image'], $suffix)).'_'.($key+1).$suffix;
 			
