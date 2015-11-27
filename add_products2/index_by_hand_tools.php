@@ -8,7 +8,7 @@ $act = $_REQUEST['act']?$_REQUEST['act']:'';
 $is_iframe_url = (int)$_GET['is_iframe_url'];
 $url_is_cat = $_REQUEST['url_is_cat'];
 
-echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';
+
 if(!empty($act)){
 	$pm = new ZencartProductModel();
 }
@@ -18,7 +18,19 @@ $sql = "select smt_account from 2012add_products_setting  group by  smt_account"
 $setting_smt_account = $db->getAll($sql);
 
 		
+if($act == 'product_url_get_img_url'){
+	$url = $_REQUEST['product_url']?($_REQUEST['product_url']):'';
+	$content = file_get_contents($url);
+	preg_match('/<meta\s+property="og:image"\s+content="([^"]+)"/i', $content, $arr);
 	
+	if($arr){
+		$product_url_get_img_url = $arr[1];
+	}else{
+		$product_url_get_img_url = 'not found';
+	}
+	
+}	
+
 if($act == 'resetProductImg'){
 	$products_id = $_REQUEST['products_id']?(int)($_REQUEST['products_id']):'';
 	$products_image_url = trim($_REQUEST['products_image']);
@@ -345,8 +357,33 @@ function addProductImage(){
 </form>
 
 
+
+	<form action="" method="post" target="_self">
+<input type="hidden" name="act" value="product_url_get_img_url" />
+<table>
+	<tr><td colspan=2><h2><center>产品url获取图片地址</center></h2></td></tr>
 	
-		<form action="" method="post" target="_blank">
+	<tr><td width="20%" class="align_right">产品url:</td>
+	<td><input type="text" style="width:100%;" name="product_url" value="" /></td>
+	</tr>
+	
+	<tr><td width="20%" class="align_right">图片地址:</td>
+	<td><input type="text" style="width:100%;" name="img_url" value="<?php echo $product_url_get_img_url;?>" /></td>
+	</tr>
+	
+	<tr><td colspan=2 align="center"><input type="submit" name="submit" value="提交" />
+	
+	</td>
+	
+	</tr>
+	
+</table>
+</form>
+
+
+
+	
+<form action="" method="post" target="_blank">
 <input type="hidden" name="act" value="del_product_cat" />
 <table>
 	<tr><td colspan=2><h2><center>删除目录</center></h2></td></tr>
