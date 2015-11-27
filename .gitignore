@@ -4,3 +4,4 @@ images/
 .settings/
 configure.php*
 logs/
+.bash*
