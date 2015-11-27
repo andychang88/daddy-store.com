@@ -259,7 +259,7 @@ function addProductImage(){
 	$products_price = $_REQUEST['products_price']?$_REQUEST['products_price']:'112.5';
 	$products_model = $_REQUEST['products_model']?$_REQUEST['products_model']:'';
 	if(empty($products_model)){
-		$products_model = 'BK'.date('YmdHis');
+		$products_model = 'D'.date('YmdHis');
 	}
 	?>
 	
@@ -281,8 +281,8 @@ function addProductImage(){
 	</td>
 	</tr>
 	
-	<tr class="hidden"><td class="align_right">产品sn:</td>
-	<td><input type="text" style="width:100%;" name="products_model" value="" />（默认值为自动生成的sn）</td>
+	<tr><td class="align_right">产品sn:</td>
+	<td><input type="text" style="width:100%;" name="products_model" value="<?php echo $products_model;?>" />（默认值为自动生成的sn）</td>
 	</tr>
 	
 	

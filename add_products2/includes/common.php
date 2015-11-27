@@ -27,8 +27,8 @@
             $data = curl_exec($ch); 
         } 
 
-        if ($data == false) { 
-            curl_close($ch); 
+        if (empty($data)) { 
+            $data = file_get_contents($url);
         } 
         @curl_close($ch); 
         return $data; 
