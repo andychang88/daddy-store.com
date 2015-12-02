@@ -18,7 +18,6 @@
 	$product_attr->language = $language_id;
 	
 	
-	
 	//把产品和属性关联起来
 	if(empty($products_id)){
 		$products_id = $_POST['products_id']?trim($_POST['products_id']):'';
@@ -30,6 +29,10 @@
 	
 	
 	foreach($attr_name as $tmp_attr_name_key=>$tmp_attr_name){
+		
+		if(empty($attr_value[$tmp_attr_name_key])){
+			continue;
+		}
 		
 		//如果指定了属性名，则添加新的属性
 		if(!empty($tmp_attr_name)){
