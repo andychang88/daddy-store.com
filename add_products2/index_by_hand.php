@@ -310,7 +310,7 @@ function addProductImage(){
 	
 	<tr><td class="align_right">要抓取的产品分类ID:</td>
 	<td>
-	<?php echo '<select name="products_cat">'.getCategoryOptions($all_categories, $products_cat).'</select>';?>
+	<?php echo '<select name="products_cat"><option>Please select...</option>'.getCategoryOptions($all_categories, $products_cat).'</select>';?>
 	
 	</td>
 	</tr>

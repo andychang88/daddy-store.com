@@ -43,7 +43,7 @@ function zen_get_categories($parent_id = '0', $indent = '&nbsp;&nbsp;&nbsp;&nbsp
   function getCategoryOptions($categories_array, $selected_id=0){
   	if(!$categories_array) return $categories_array;
   	
-  	$options = '<option>Please select...</option>';
+  	$options = '';
   	
   	foreach ($categories_array as $category){
   		$options .= '<option ' . ($category['id'] == $selected_id? 'selected':'') . ' value="'.$category['id'].'">'.$category['text'].'</option>';
