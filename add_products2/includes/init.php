@@ -36,7 +36,7 @@ define('PHP_SELF', $php_self);
 define('ROOT_PATH', dirname(dirname( str_replace('\\', '/', __FILE__))).'/');
 define('STORE_ROOT_PATH', dirname(ROOT_PATH).'/');
 define('IMAGE_PATH', STORE_ROOT_PATH.'images/');
-define('JS_JUQERY', STORE_ROOT_PATH.'includes/templates/blackcool/jscript/jscript_a_jquery-1.3.2.js');
+define('JS_JUQERY', '/includes/templates/blackcool/jscript/jscript_a_jquery-1.3.2.js');
 
 
 include ROOT_PATH.'includes/config.php';
