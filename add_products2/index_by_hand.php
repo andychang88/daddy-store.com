@@ -6,6 +6,9 @@ include 'includes/product_attr_model.php';
 
 $act = $_REQUEST['act']?$_REQUEST['act']:'';
 
+$all_categories = zen_get_categories();
+
+
 //getAttrValues
 if($act == 'getAttrValues'){
 	$attr_id = $_REQUEST['attr_id']?$_REQUEST['attr_id']:'0';
@@ -81,6 +84,9 @@ if($act == 'save_detail'){
 	$insert_product['products_price'] = $_REQUEST['products_price'];
 	
 	$products_cat = $_REQUEST['products_cat'];
+	if(empty($products_cat)){
+		die('请选择产品分类');
+	}
 	//产品主图----end
 	$insert_product_desp['language_id'] = $_REQUEST['language_id'];
 	$insert_product_desp['products_name'] = addslashes($_REQUEST['products_name']);
@@ -303,7 +309,10 @@ function addProductImage(){
 	</tr>
 	
 	<tr><td class="align_right">要抓取的产品分类ID:</td>
-	<td><input type="text" style="width:100%;" name="products_cat" value="<?php echo $products_cat;?>" /></td>
+	<td>
+	<?php echo '<select name="products_cat">'.getCategoryOptions($all_categories, $products_cat).'</select>';?>
+	
+	</td>
 	</tr>
 	<tr><td class="align_right">产品价格:</td>
 	<td><input type="text" style="width:100%;" name="products_price" value="<?php echo $products_price;?>" /></td>

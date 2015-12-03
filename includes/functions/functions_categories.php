@@ -112,7 +112,7 @@
   }
 
 ////
-  function zen_get_categories($categories_array = '', $parent_id = '0', $indent = '', $status_setting = '') {
+  function zen_get_categories($categories_array = '', $parent_id = '0', $indent = '&nbsp;&nbsp;', $status_setting = '1') {
     global $db;
 
     if (!is_array($categories_array)) $categories_array = array();

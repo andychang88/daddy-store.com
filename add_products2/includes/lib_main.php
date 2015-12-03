@@ -1,4 +1,60 @@
 <?php
+function zen_get_categories($parent_id = '0', $indent = '&nbsp;&nbsp;&nbsp;&nbsp;', $status_setting = '1') {
+    global $db;
+
+    $categories_array = array();
+
+    // show based on status
+    if ($status_setting != '') {
+      $zc_status = " c.categories_status='" . (int)$status_setting . "' and ";
+    } else {
+      $zc_status = '';
+    }
+
+    $categories_query = "select c.categories_id, cd.categories_name, c.categories_status
+                         from categories c, categories_description cd
+                         where " . $zc_status . "
+                         parent_id = '" . (int)$parent_id . "'
+                         and c.categories_id = cd.categories_id
+                         and cd.language_id = '3'
+                         order by sort_order, cd.categories_name";
+
+    $categories = $db->getAll($categories_query);
+	
+    if($categories){
+    	
+	    foreach ($categories as $row) {
+	      $categories_array[$row['categories_id']] = array( 'id' => $row['categories_id'],
+	                                  						'text' => $indent . $row['categories_name']);
+	
+	      if ($row['categories_id'] != $parent_id) {
+	        $categories_array[$row['categories_id']]['children'] = zen_get_categories($row['categories_id'], $indent . '&nbsp;&nbsp;&nbsp;&nbsp;', $status_setting);
+	      }
+	      
+	    }
+	    
+    }
+    
+   
+
+    return $categories_array;
+  }
+  
+  function getCategoryOptions($categories_array, $selected_id=0){
+  	if(!$categories_array) return $categories_array;
+  	
+  	$options = '<option>Please select...</option>';
+  	
+  	foreach ($categories_array as $category){
+  		$options .= '<option ' . ($category['id'] == $selected_id? 'selected':'') . ' value="'.$category['id'].'">'.$category['text'].'</option>';
+  		if($category['children']){
+  			$options .= getCategoryOptions($category['children']);
+  		}
+  	}
+  	
+  	return $options;
+  }
+  
 function deleteProductBackEver($products_id){
 	
 	$site_arr = array();
