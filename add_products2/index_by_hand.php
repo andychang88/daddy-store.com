@@ -245,6 +245,7 @@ function addProductImage(){
 <body>
 <div class="wrap">
 <p class="steps">
+<p><a href="index_by_hand_tools.php" target="_blank">工具助手</a></p>
 <b>使用步骤：</b><br>
 1. 保存第三方网站图片到本地电脑上；以待第二步上传<br>
 2. 填写上面框中的项目，以及上传图片<br>
