@@ -163,7 +163,7 @@
    
    
    function parseRecommendConfigVal($item_value){
-   	$matches = preg_split('/,|\r\n/', $item_value);
+   	$matches = preg_split('/\r\n/', $item_value);
    	
    	return array_filter($matches);
    }

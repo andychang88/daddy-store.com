@@ -19,6 +19,14 @@
 <?php //if ($zc_show_new_products == true && sizeof($new_products)>0 ) {
 if ($tmp_cat_id) {
 	
+	$products_id_str = '';
+	
+	if(strpos($tmp_cat_id, '(') !== false && strpos($tmp_cat_id, ')') !== false){
+		$products_id_str = substr($tmp_cat_id, strpos($tmp_cat_id, '('), strpos($tmp_cat_id, ')'));
+		$tmp_cat_id = substr($tmp_cat_id, 0, strpos($tmp_cat_id, '('));
+		
+	}
+			
 	$tmp_cat_url = zen_href_link('index','cPath='.$tmp_cat_id);
 	$more = "<a style='float:right;font-weight:normal;font-size:12px;margin-right:20px;' href='".$tmp_cat_url."'>More</a>";
 ?> 
@@ -28,7 +36,8 @@ if ($tmp_cat_id) {
 	   <div class="godsbox rows5">
 			<?php 
 			
-			$new_products = getNewProductsByCatId($tmp_cat_id);
+			
+			$new_products = getNewProductsByCatId($tmp_cat_id, 5, $products_id_str);
 			
 			foreach($new_products as $product){?>            
                 <div class="plist">

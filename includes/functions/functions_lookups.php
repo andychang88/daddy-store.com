@@ -939,14 +939,18 @@
     return $new_range;
   }
   
-  function getNewProductsByCatId($catId, $limit = 5) {
+  function getNewProductsByCatId($catId, $limit = 5, $products_id_str = '') {
   	 global $db;
   	 $new_products=array();
 	 $limit = intval($limit);
 	 
+	 if(strlen($products_id_str) > 0){
+	 	$products_id_str = ' products_id in '.$products_id_str.' and ';
+	 }
+	 
 	 $new_sql = "select * 
 	 			from `products` 
-	 			where master_categories_id=".$catId." and products_status=1 
+	 			where ".$products_id_str." master_categories_id=".$catId." and products_status=1 
 	 			order by products_id desc 
 	 			limit 0,".$limit;
 	 
