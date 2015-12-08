@@ -43,11 +43,7 @@ $(document).ready(function(){
 			      </style>
 				
 				<div class="centrows">
-					
-				      
-				
-				      
-				
+			
 					<div class="rowsgods">
 					
 					<?php 
