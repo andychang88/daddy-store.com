@@ -673,7 +673,7 @@ function getUpdateType(){
 		}
 		
 		if(strpos($product_ids, ",")){
-			$wherePid .= " and products_id in (".$product_ids.")";
+			$wherePid .= " and products_id in (" . trim($product_ids,",") . ")";
 		}
 		
 			
