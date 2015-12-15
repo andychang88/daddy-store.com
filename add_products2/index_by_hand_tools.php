@@ -497,10 +497,14 @@ function addProductImage(){
 	
 	
 	<tr><td width="20%" class="align_right">是否禁用旧的目录:</td>
-	<td><input type="checkbox" checked  name="is_disable_old_cat" value="1" /></td>
+	<td><input type="checkbox" checked  name="is_disable_old_cat" value="0" /></td>
 	</tr>
 	
 	
+	
+	<tr><td width="20%" class="align_right">产品ID:</td>
+	<td><input type="text" style="width:80%;" name="product_ids" value="" />(多个产品用英文逗号隔开;如果要移动两个产品id之间的产品。2个产品id使用-隔开)</td>
+	</tr>
 	
 	<tr><td width="20%" class="align_right">原来的目录id:</td>
 	<td><input type="text" style="width:100%;" name="old_cat_id" value="" /></td>

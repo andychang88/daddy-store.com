@@ -650,7 +650,7 @@ function getUpdateType(){
 	function moveProductCategory(){
 		
 		
-		$start_product_id = $_POST['start_product_id']?$_POST['start_product_id']:0;
+		$product_ids = $_POST['product_ids']?$_POST['product_ids']:0;
 		
 		$old_cat_id = $_POST['old_cat_id']?$_POST['old_cat_id']:0;
 		$new_cat_id = $_POST['new_cat_id']?$_POST['new_cat_id']:0;
@@ -660,20 +660,34 @@ function getUpdateType(){
 			die("缺少参数");
 		}
 		
+		$wherePid = " 1 ";
 		
+		if(is_numeric($product_ids)){
+			$wherePid .= " and products_id = ".$product_ids;
+		}
+		
+		if(strpos($product_ids, "-")){
+			list($minPid, $maxPid) = explode("-", $product_ids, 1);
+			
+			$wherePid .= " and products_id >= ".$minPid." and products_id <= ".$maxPid;
+		}
+		
+		if(strpos($product_ids, ",")){
+			$wherePid .= " and products_id in (".$product_ids.")";
+		}
 		
 			
-			$sql = "update products set master_categories_id=$new_cat_id where  master_categories_id=$old_cat_id";
+		$sql = "update products set master_categories_id=$new_cat_id where $wherePid and master_categories_id=$old_cat_id";
+		$GLOBALS['db']->query($sql);
+		
+		$sql = "update products_to_categories set categories_id=$new_cat_id where  $wherePid and categories_id=$old_cat_id ";
+		$GLOBALS['db']->query($sql);
+		
+		if($is_disable_old_cat){
+			$sql = "update categories set categories_status=0 where categories_id=$old_cat_id 
+				 ";
 			$GLOBALS['db']->query($sql);
-			
-			$sql = "update products_to_categories set categories_id=$new_cat_id where  categories_id=$old_cat_id ";
-			$GLOBALS['db']->query($sql);
-			
-			if($is_disable_old_cat){
-				$sql = "update categories set categories_status=0 where categories_id=$old_cat_id 
-					 ";
-				$GLOBALS['db']->query($sql);
-			}
+		}
 		
 		
 		

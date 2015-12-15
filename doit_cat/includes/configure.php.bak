@@ -26,10 +26,13 @@
    *
    * If you desire your *entire* admin to be SSL-protected, make sure you use a "https:" URL for all 4 of the following:
    */
-  define('HTTP_SERVER', 'http://192.168.1.152');
-  define('HTTPS_SERVER', 'https://192.168.1.152');
-  define('HTTP_CATALOG_SERVER', 'http://192.168.1.152');
-  define('HTTPS_CATALOG_SERVER', 'https://192.168.1.152');
+  error_reporting(1);
+  //error_reporting(E_ALL);
+  
+  define('HTTP_SERVER', 'http://'.$_SERVER['HTTP_HOST']);
+  define('HTTPS_SERVER', 'https://'.$_SERVER['HTTP_HOST']);
+  define('HTTP_CATALOG_SERVER', 'http://'.$_SERVER['HTTP_HOST']);
+  define('HTTPS_CATALOG_SERVER', 'https://'.$_SERVER['HTTP_HOST']);
 
   // Use secure webserver for catalog module and/or admin areas?
   define('ENABLE_SSL_CATALOG', 'false');
@@ -38,10 +41,10 @@
 // NOTE: be sure to leave the trailing '/' at the end of these lines if you make changes!
 // * DIR_WS_* = Webserver directories (virtual/URL)
   // these paths are relative to top of your webspace ... (ie: under the public_html or httpdocs folder)
-  define('DIR_WS_ADMIN', '/efox-shop/eF0Xsh0p/');
-  define('DIR_WS_CATALOG', '/efox-shop/');
-  define('DIR_WS_HTTPS_ADMIN', '/efox-shop/eF0Xsh0p/');
-  define('DIR_WS_HTTPS_CATALOG', '/efox-shop/');
+  define('DIR_WS_ADMIN', '/doit_cat/');
+  define('DIR_WS_CATALOG', '/');
+  define('DIR_WS_HTTPS_ADMIN', '/doit_cat/');
+  define('DIR_WS_HTTPS_CATALOG', '/');
 
   define('DIR_WS_IMAGES', 'images/');
   define('DIR_WS_ICONS', DIR_WS_IMAGES . 'icons/');
@@ -57,8 +60,8 @@
 
 // * DIR_FS_* = Filesystem directories (local/physical)
   //the following path is a COMPLETE path to your Zen Cart files. eg: /var/www/vhost/accountname/public_html/store/
-  define('DIR_FS_ADMIN', 'd:/www/efox-shop/eF0Xsh0p/');
-  define('DIR_FS_CATALOG', 'd:/www/efox-shop/');
+  define('DIR_FS_CATALOG', 'E:/htdocs/local.daddy-store.com/');
+  define('DIR_FS_ADMIN', DIR_FS_CATALOG . 'doit_cat/');
 
   define('DIR_FS_CATALOG_LANGUAGES', DIR_FS_CATALOG . 'includes/languages/');
   define('DIR_FS_CATALOG_IMAGES', DIR_FS_CATALOG . 'images/');
@@ -71,10 +74,11 @@
 // define our database connection
   define('DB_TYPE', 'mysql');
   define('DB_PREFIX', '');
-  define('DB_SERVER', 'localhost');
-  define('DB_SERVER_USERNAME', 'efoxshop_zc');
-  define('DB_SERVER_PASSWORD', '123456');
-  define('DB_DATABASE', 'efoxshop_zc');
+  define('DB_SERVER', '127.0.0.1');
+  define('DB_SERVER_USERNAME', 'changah_root');
+  define('DB_SERVER_PASSWORD', 'changanti@163.com');
+  define('DB_DATABASE', 'changah_daddystore');
+
   define('USE_PCONNECT', 'false');
   define('STORE_SESSIONS', 'db');
   // for STORE_SESSIONS, use 'db' for best support, or '' for file-based storage
@@ -85,7 +89,7 @@
   // or webserver user has write privileges (chmod 666 or 777). We recommend using the "cache" folder inside the Zen Cart folder
   // ie: /path/to/your/webspace/public_html/zen/cache   -- leave no trailing slash  
   define('SQL_CACHE_METHOD', 'file'); 
-  define('DIR_FS_SQL_CACHE', 'd:/www/efox-shop/cache');
+  define('DIR_FS_SQL_CACHE', DIR_FS_CATALOG . 'cache');
 
 // EOF
 ?>

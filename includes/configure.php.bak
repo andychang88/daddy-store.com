@@ -16,7 +16,7 @@
   //define('HTTP_SERVER', 'http://www.usbexporter.com');
 define('HTTP_SERVER', "http://".$_SERVER['HTTP_HOST']);
   //define('HTTP_SERVER', 'http://74.86.146.194');
-  define('HTTPS_SERVER', 'https://www.usbexporter.com');
+  define('HTTPS_SERVER', "http://".$_SERVER['HTTP_HOST']);
 
   // Use secure webserver for checkout procedure?
   define('ENABLE_SSL', 'false');
@@ -42,7 +42,7 @@ define('HTTP_SERVER', "http://".$_SERVER['HTTP_HOST']);
 
 // * DIR_FS_* = Filesystem directories (local/physical)
   //the following path is a COMPLETE path to your Zen Cart files. eg: /var/www/vhost/accountname/public_html/store/
-  define('DIR_FS_CATALOG', '/home/changah/public_html/www3/');
+  define('DIR_FS_CATALOG', 'E:/htdocs/local.daddy-store.com/');
 
   define('DIR_FS_DOWNLOAD', DIR_FS_CATALOG . 'download/');
   define('DIR_FS_DOWNLOAD_PUBLIC', DIR_FS_CATALOG . 'pub/');
@@ -56,37 +56,17 @@ define('HTTP_SERVER', "http://".$_SERVER['HTTP_HOST']);
   define('DB_SERVER', 'localhost');
   define('DB_SERVER_USERNAME', 'root');
   define('DB_SERVER_PASSWORD', '');
-  define('DB_DATABASE', 'glstore2');
+  define('DB_DATABASE', 'changah_daddystore');
   define('USE_PCONNECT', 'false');
   define('STORE_SESSIONS', 'db');
-  // for STORE_SESSIONS, use 'db' for best support, or '' for file-based storage
-//define our blog system database
-  define('BLOG_SIDEBOX_ENABLED',false);
-  define('BLOG_DB_SERVER','localhost:/tmp/mysql5.sock');
-  define('BLOG_DB_SERVER_USERNAME','blog');
-  define('BLOG_DB_SERVER_PASSWORD','AjT#$*)@(*)@!HRAK(');
-  define('BLOG_DB_DATABASE','usbexporter');
-  define('BLOG_USE_PCONNECT', 'false');
   
-  define('BLOG_URL','http://www.usbexporter.com/wordpress/');
-  define('BLOG_ARTICLE_LINK',BLOG_URL.'?p=%s');
-  
-  define('FORUM_SIDEBOX_ENABLED',false);
-  define('FORUM_DB_SERVER','localhost:/tmp/mysql5.sock');
-  define('FORUM_DB_SERVER_USERNAME','handy_forum');
-  define('FORUM_DB_SERVER_PASSWORD','H@#!VJ)*@!)*');
-  define('FORUM_DB_DATABASE','handy_forum');
-  define('FORUM_USE_PCONNECT', 'false');
-  
-  define('FORUM_URL','http://forum.usbexporter.com/');
-  define('FORUM_ARTICLE_LINK',FORUM_URL.'viewtopic.php?f=%s&t=%s');
   // The next 2 "defines" are for SQL cache support.
   // For SQL_CACHE_METHOD, you can select from:  none, database, or file
   // If you choose "file", then you need to set the DIR_FS_SQL_CACHE to a directory where your apache 
   // or webserver user has write privileges (chmod 666 or 777). We recommend using the "cache" folder inside the Zen Cart folder
   // ie: /path/to/your/webspace/public_html/zen/cache   -- leave no trailing slash  
   define('SQL_CACHE_METHOD', 'file'); 
-  define('DIR_FS_SQL_CACHE', '/home/changah/public_html/www3/cache');
+  define('DIR_FS_SQL_CACHE', DIR_FS_CATALOG.'cache');
   //define price depends on quantity show or not 
   define('SHOW_PRICE_QTY_MAX_GROUP',3);
   
