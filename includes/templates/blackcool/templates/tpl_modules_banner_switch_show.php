@@ -66,7 +66,7 @@ function indexbanner(namebar){
 }   
 $(function(){
 	var bar=indexbanner(".banr_styleA");
-	var bar1=indexbanner(".banr_styleB");
+	//var bar1=indexbanner(".banr_styleB");
 });
 </script>
 
@@ -127,7 +127,7 @@ $(function(){
 	    <?php foreach($banner_info as $key=>$val){?>
 	    
 	    <LI><!--  --><A  href="<?php echo $val['banner_url'];?>" 
-	    target=_blank><?php echo zen_image(DIR_WS_IMAGES.$val['banner_image'],$val['banner_title'],660,180,"border=0");?></A> <!--  --></LI>
+	    target=_blank><?php echo zen_image(DIR_WS_IMAGES.$val['banner_image'],$val['banner_title'],660,360,"border=0");?></A> <!--  --></LI>
 	    
 	    <?php }?>
 	    
@@ -139,55 +139,6 @@ $(function(){
 
 
 
- <?php
- 
-	//首页中间第二组图片轮换
-   $banner_info=array();
-   $banner_sql='select banners_id, banners_title, banners_image, 
-                       banners_html_text, banners_open_new_windows, banners_url
-                from ' . TABLE_BANNERS . '
-                where status = 1
-                and  banners_group="IndexFlash2"  order by banners_sort_order asc,banners_id asc ';
-   $banner_db=$db->Execute($banner_sql);
-   if($banner_db->RecordCount()>0){
-     while(!$banner_db->EOF){
-	   $banner_info[]=array('banner_title'=>$banner_db->fields['banners_title'],
-	                        'banner_image'=>$banner_db->fields['banners_image'],
-							'banner_url'=>$banner_db->fields['banners_url']
-							);
-	   $banner_db->MoveNext();
-	 }
-   }
-   
-   //echo '<pre>';print_r($banner_info);exit;
-?>
-<DIV class=banr_styleB>
-<DIV class=chang_baner>
-      <DIV class=chang_vietop>
-	    <UL>
-	    <?php foreach($banner_info as $key=>$val){?>
-	       
-	   <LI><SPAN><A data-placement="top" data-toggle="tooltip" 
-	   data-original-title="<?php echo $val['banner_title'];?>"><?php echo $val['banner_title'];?> </A></SPAN></LI>
-	   
-	   <?php }?>
-	    
-	    </UL>
-      </DIV>
-      <DIV class=clear></DIV>
-      <DIV class=chang_bdy>
-	 <SPAN class=bar_lf></SPAN>
-	 <SPAN class=bar_rf></SPAN>
-	 <DIV class=chang_bg></DIV>
-	 <UL>
-	    <?php foreach($banner_info as $key=>$val){?>
-	    
-	    <LI><!--  --><A  href="<?php echo $val['banner_url'];?>" 
-	    target=_blank><?php echo zen_image(DIR_WS_IMAGES.$val['banner_image'],$val['banner_title'],660,180,"border=0");?></A> <!--  --></LI>
-	    
-	    <?php }?>
-      </DIV>
-</DIV></DIV>
 
 
 

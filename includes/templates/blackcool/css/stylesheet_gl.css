@@ -777,7 +777,7 @@ margin:15px;
 .chang_vietop UL LI SPAN {
 	LINE-HEIGHT: 15px;
 	 MARGIN: 0px auto; 
-	 WIDTH: 110px;
+	 WIDTH: 200px;
 	  DISPLAY: block;
 	   HEIGHT: 31px;
 	    OVERFLOW: hidden
@@ -793,7 +793,7 @@ margin:15px;
 	 CLEAR: left; 
 	 TOP: -6px; 
 	/* MARGIN-TOP: 5px; */
-	 LEFT: -100px;
+	 LEFT: -20px;
 	 margin-top:5px;
 }
 .chang_bdy {
@@ -801,7 +801,7 @@ margin:15px;
 	Z-INDEX: 2; 
 	POSITION: relative; 
 	WIDTH: 660px; 
-	HEIGHT: 190px; 
+	HEIGHT: 370px; 
 	OVERFLOW: hidden
 }
 .chang_bdy UL {
@@ -835,7 +835,7 @@ background-position:-74px -74px;
     display: inline-block;
     height: 55px;
     position: absolute;
-    top: 75px;
+    top: 150px;
     width: 35px;
     z-index: 3;
 }
