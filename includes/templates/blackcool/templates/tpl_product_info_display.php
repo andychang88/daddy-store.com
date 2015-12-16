@@ -27,7 +27,7 @@ $(document).ready(function(){
    
    <div class="banr">
       <?php
-      echo zen_display_banner_by_groupd('ProductList');
+      echo zen_display_banner_by_groupd('ProductDetail');
       ?>
       
       

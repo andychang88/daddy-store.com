@@ -416,7 +416,7 @@ function popupImageWindow(url) {
           </tr>
           <tr>
             <td class="main" valign="top"><?php echo TEXT_BANNERS_IMAGE; ?></td>
-            <td class="main"><?php echo zen_draw_file_field('banners_image') . ' (注意：如果选择上传文件，请清除下面的本地文件内容) ' . TEXT_BANNERS_IMAGE_LOCAL . '<br>' . DIR_FS_CATALOG_IMAGES . zen_draw_input_field('banners_image_local', (isset($bInfo->banners_image) ? $bInfo->banners_image : ''), zen_set_field_length(TABLE_BANNERS, 'banners_image')); ?></td>
+            <td class="main"><?php echo zen_draw_file_field('banners_image') . ' (注意：如果选择上传文件，请清除下面文本框中的内容) ' . TEXT_BANNERS_IMAGE_LOCAL . '<br>' . DIR_FS_CATALOG_IMAGES . zen_draw_input_field('banners_image_local', (isset($bInfo->banners_image) ? $bInfo->banners_image : ''), zen_set_field_length(TABLE_BANNERS, 'banners_image')); ?></td>
           </tr>
           <tr>
             <td colspan="2"><?php echo zen_draw_separator('pixel_trans.gif', '1', '10'); ?></td>
@@ -490,7 +490,7 @@ function popupImageWindow(url) {
 // Split Page
 // reset page when page is unknown
 if (($_GET['page'] == '' or $_GET['page'] == '1') and $_GET['bID'] != '') {
-  $banners_query_raw = "select banners_id, banners_title, banners_image, banners_group, status, expires_date, expires_impressions, date_status_change, date_scheduled, date_added, banners_open_new_windows, banners_on_ssl, banners_sort_order from " . TABLE_BANNERS . " order by banners_group, banners_title";
+  $banners_query_raw = "select banners_id, banners_title, banners_image, banners_group, status, expires_date, expires_impressions, date_status_change, date_scheduled, date_added, banners_open_new_windows, banners_on_ssl, banners_sort_order from " . TABLE_BANNERS . " order by banners_group, banners_sort_order";
   $check_page = $db->Execute($banners_query_raw);
   $check_count=1;
   if ($check_page->RecordCount() > MAX_DISPLAY_SEARCH_RESULTS) {
@@ -507,7 +507,7 @@ if (($_GET['page'] == '' or $_GET['page'] == '1') and $_GET['bID'] != '') {
   }
 }
 
-    $banners_query_raw = "select banners_id, banners_title, banners_image, banners_group, status, expires_date, expires_impressions, date_status_change, date_scheduled, date_added, banners_open_new_windows, banners_on_ssl, banners_sort_order from " . TABLE_BANNERS . " order by banners_group,banners_title ";
+    $banners_query_raw = "select banners_id, banners_title, banners_image, banners_group, status, expires_date, expires_impressions, date_status_change, date_scheduled, date_added, banners_open_new_windows, banners_on_ssl, banners_sort_order from " . TABLE_BANNERS . " order by banners_group,banners_sort_order ";
     $banners_split = new splitPageResults($_GET['page'], MAX_DISPLAY_SEARCH_RESULTS, $banners_query_raw, $banners_query_numrows);
     $banners = $db->Execute($banners_query_raw);
     while (!$banners->EOF) {

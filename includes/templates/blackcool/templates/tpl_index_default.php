@@ -38,7 +38,7 @@ $(document).ready(function(){
 					</div>
 				</div>
 				<style type="text/css">
-				.centrows{clear:left;overflow:hidden;padding-top:15px;}
+				.centrows{clear:left;overflow:hidden;padding-top:45px;}
 				.rowsleft{display:inline;float:left;margin:0 10px 0 0;width:210px;}
 			      </style>
 				

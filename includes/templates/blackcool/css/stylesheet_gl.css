@@ -520,7 +520,7 @@ float:right;
 }
 
 .rightbody{
-float:right;width: 280px;height:500px;
+float:right;width: 280px;
 margin-top:20px;margin-left:15px;overflow:hidden;
 }
 .centron{
@@ -759,12 +759,14 @@ margin:15px;
 	 PADDING-TOP: 0px
 }
 .chang_vietop UL LI {
-	LINE-HEIGHT: 15px; 
-	WIDTH: 125px;
+	LINE-HEIGHT: 20px; 
+	WIDTH: 200px;
+	 HEIGHT: 31px;
 	FLOAT: left;
 	 HEIGHT: 31px; 
 	 CURSOR: pointer; 
-	 FONT-WEIGHT: bold
+	 FONT-WEIGHT: bold;
+	 OVERFLOW: hidden;
 }
 .chang_vietop UL LI A {
 	TEXT-ALIGN: center; 
@@ -774,14 +776,7 @@ margin:15px;
 .chang_vietop UL LI A:hover {
 	COLOR: #7c7c7c
 }
-.chang_vietop UL LI SPAN {
-	LINE-HEIGHT: 15px;
-	 MARGIN: 0px auto; 
-	 WIDTH: 200px;
-	  DISPLAY: block;
-	   HEIGHT: 31px;
-	    OVERFLOW: hidden
-}
+
 .chang_vietop UL .chand {
 	COLOR: #e47911; CURSOR: default
 }
@@ -793,9 +788,10 @@ margin:15px;
 	 CLEAR: left; 
 	 TOP: -6px; 
 	/* MARGIN-TOP: 5px; */
-	 LEFT: -20px;
+	 LEFT: -25px;
 	 margin-top:5px;
 }
+
 .chang_bdy {
 
 	Z-INDEX: 2; 
@@ -999,6 +995,7 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
     display: inline;
     float: left;
     height: 220px;
+    width: 200px;
     margin-bottom: 30px;
     margin-right:20px;
 }
@@ -1011,7 +1008,6 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 
 .rowsgods .plist dl {
     margin: 0 auto;
-    width: 140px;
 }
 .explan_name{
 float:left;

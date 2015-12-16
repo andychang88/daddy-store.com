@@ -15,7 +15,7 @@ function indexbanner(namebar){
 		indent:0,
 		speed:500,
 		interval:4000,
-		pointWidth:-70,
+		pointWidth:-30,
 		leftbtn:$(namebar).find(".bar_lf"),
 		rightbtn:$(namebar).find(".bar_rf")
 	},
@@ -26,7 +26,7 @@ function indexbanner(namebar){
 		//set.boimg.find("ul").stop();
 		//set.point.stop();
 		set.lit.find("li").eq(set.indent).addClass("chand").siblings().removeClass("chand");
-		set.boimg.find("ul").stop().animate({left:-indnt*movWidth},set.speed);
+		set.boimg.find("ul").stop().animate({left:-indnt*movWidth},set.speed);//slide big images
 		set.point.stop().animate({left:(set.indent)*pointListWidth+set.pointWidth},set.speed);	
 	}
 	function AutoAddBar(){
