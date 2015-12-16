@@ -29,11 +29,16 @@
 											   $current_page_base,
 											   'templates'). '/tpl_modules_additional_images.php');
 	 ?>
+	 
+	 
+	 
+	  <?php  $reviews_count=zen_get_reviews_of_product_count($products_id);?>
+	  <?php  $average_rating=zen_get_average_rating($products_id,$reviews_count);?>
+	  <?php if( $average_rating > 0 ){?>
 	 <div class="rating">
 	    <p>
 			<strong><?php echo TEXT_AVERAGE_RATING;?></strong>
-		    <?php  $reviews_count=zen_get_reviews_of_product_count($products_id);?>
-			<?php  $average_rating=zen_get_average_rating($products_id,$reviews_count);?>
+		   
 			<span class="rating_star2">			       
 				   <?php echo zen_image(DIR_WS_TEMPLATE_IMAGES.'avg_rating_'.$average_rating.'.png');?>				         
 			</span>			
@@ -54,18 +59,7 @@
 		    <?php }?>
 		</p>
 	</div>
-	
+	<?php }?>
      
-     <strong>Share:</strong>
-						
-					
-						<a rel="nofollow" href="http://www.jiathis.com/send/?webid=fb&url=<?php echo HTTP_SERVER.$_SERVER['REQUEST_URI'];?>&title=<?php echo META_TAG_TITLE; ?>"
-						target="_blank"><img class="verticalmiddle" src="includes/templates/blackcool/images/facebook.gif" alt="facebook"/></a>
-
-                        <a rel="nofollow" href="http://www.jiathis.com/send/?webid=twitter&url=<?php echo HTTP_SERVER.$_SERVER['REQUEST_URI'];?>&title=<?php echo META_TAG_TITLE; ?>" 
-						target="_blank"><img class="verticalmiddle" src="includes/templates/blackcool/images/twitter.gif" alt="twitter"/></a>
-						<a rel="nofollow" href="http://www.jiathis.com/send/?webid=msn&url=	<?php echo HTTP_SERVER.$_SERVER['REQUEST_URI'];?>&title=<?php echo META_TAG_TITLE; ?>" 
-						target="_blank"><img class="verticalmiddle" src="includes/templates/blackcool/images/msn.gif" alt="msn"/></a>
-						<!--end-->
 
 </div>

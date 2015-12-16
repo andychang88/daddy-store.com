@@ -1,7 +1,7 @@
 cache/
 bmz_cache/
 images/
-doit_cat/images/
+doit_cat/images/*
 .settings/
 configure.php*
 logs/
