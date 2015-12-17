@@ -43,7 +43,7 @@ define('MODULE_PAYMENT_WESTUN_EXTRA_TEXT','<div class="payment_text"><span  name
 		<li><b>First Name:</b> Anhao</li>
 		<li><b>Last Name:</b> chang</li>
 		<li><b>Country:</b> CHINA</li>
-		<li><b>Address:</b> LONGGUANGHENGGUANGRENGONGHUNO.2JIE </li>
+		<li><b>Address:</b>Floor 1103, Building No.6, Lane 4, HuaXi Country, Henggang Town, ShenZhen, GuangDong, China </li>
 		<li style="background-image: none;"><b>NOTICE:</b> We want to remind all customers that they are responsible for all local Western Union handling fees.Therefore,customers should confirm the total payment amount with their local Western Union.</li>
 	</ul>
 	</span></div>');
